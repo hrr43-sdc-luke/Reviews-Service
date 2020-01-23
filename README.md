@@ -1,2 +1,2 @@
-# Map
-This will serve up a Google Map with a pointer, caption above, zoom in-out controls, and note overlaid on the map.
+# Reviews
+This will serve up the reviews (paginated), have a "more+" option to expand the review, an aggregate stars value
