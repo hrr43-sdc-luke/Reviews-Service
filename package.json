@@ -1,0 +1,24 @@
+{
+  "name": "reviews-service",
+  "description": "This will serve up the reviews (paginated), have a \"more+\" option to expand the review, an aggregate stars value",
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git"
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HRR43-Team-Leia/Reviews-Service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HRR43-Team-Leia/Reviews-Service/issues"
+  },
+  "homepage": "https://github.com/HRR43-Team-Leia/Reviews-Service#readme"
+}
