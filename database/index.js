@@ -1,12 +1,22 @@
 const mysql = require('mysql');
-const host = process.env.DB_URL || 'localhost';
-const user = process.env.DB_User || 'root';
-const password = process.env.DB_PW || '';
+const mysqlConfig = require('./config.js');
 
+const connection = mysql.createConnection(mysqlConfig);
 
-module.exports.db = mysql.createConnection({
-  host: host,
-  user: user,
-  password: password,
-  database: 'airbnb'
-})
+//create functions to get required info from the db.  see if you can have them coming in descending order by review ID number so the newest is up front.
+const getExpReviews = (expId, callback) => {
+  let query = 'select * from reviews where experience_id = ?';
+  let experience_id = expId;
+  connection.query(query, experience_id, (err, response, body) => {
+    if (err) {
+      callback(err);
+    } else {
+      // console.log('resp', response)
+      callback(null, response);
+    }
+  })
+};
+
+module.exports = {
+  getExpReviews: getExpReviews
+}
