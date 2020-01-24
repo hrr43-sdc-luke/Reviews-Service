@@ -1,0 +1,15 @@
+CREATE DATABASE airbnb;
+
+USE airbnb;
+
+CREATE TABLE reviews (
+  id INTEGER NOT NULL AUTO_INCREMENT,
+  experience_id INTEGER NOT NULL,
+  username VARCHAR(20) NOT NULL,
+  user_id INTEGER NOT NULL,
+  date DATE NOT NULL,
+  stars INTEGER NOT NULL,
+  review VARCHAR(255) NOT NULL,
+  PRIMARY KEY(id)
+);
+
