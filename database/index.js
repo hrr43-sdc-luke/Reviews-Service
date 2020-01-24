@@ -7,11 +7,10 @@ const connection = mysql.createConnection(mysqlConfig);
 const getExpReviews = (expId, callback) => {
   let query = 'select * from reviews where experience_id = ?';
   let experience_id = expId;
-  connection.query(query, experience_id, (err, response, body) => {
+  connection.query(query, experience_id, (err, response) => {
     if (err) {
       callback(err);
     } else {
-      // console.log('resp', response)
       callback(null, response);
     }
   })
