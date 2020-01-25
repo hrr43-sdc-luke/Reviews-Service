@@ -15,7 +15,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 200 && i < 401) {
+    if (i > 200 && i < 401) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -26,7 +26,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 400 && i < 601) {
+    if (i > 400 && i < 601) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -37,7 +37,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 600 && i < 801) {
+    if (i > 600 && i < 801) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -48,7 +48,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 800 && i < 1001) {
+    if (i > 800 && i < 1001) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -59,7 +59,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 1000 && i < 1201) {
+    if (i > 1000 && i < 1201) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -70,7 +70,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 1200 && i < 1401) {
+    if (i > 1200 && i < 1401) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -81,7 +81,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 1400 && i < 1601) {
+    if (i > 1400 && i < 1601) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -92,7 +92,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 1600 && i < 1801) {
+    if (i > 1600 && i < 1801) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -103,7 +103,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 1800 && i < 2001) {
+    if (i > 1800 && i < 2001) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -114,7 +114,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 2000 && i < 2201) {
+    if (i > 2000 && i < 2201) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -125,7 +125,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 2200 && i < 2401) {
+    if (i > 2200 && i < 2401) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),
@@ -136,7 +136,7 @@ module.exports.createFakeData = () => {
       };
       results.push(user);
     }
-    if (i >= 2400) {
+    if (i > 2400) {
       var user = {
         experience_id: faker.random.number({min:1, max:100}),
         username: faker.name.firstName(),

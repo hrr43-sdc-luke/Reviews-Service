@@ -1,5 +1,17 @@
 const mysql = require('mysql');
-const mysqlConfig = require('./config.js');
+
+const localMysqlConfig = require('./config.js');
+
+const host = process.env.DB_URL || localMysqlConfig.host;
+const user = process.env.DB_User || localMysqlConfig.user;
+const password = process.env.DB_PW || localMysqlConfig.password;
+
+const mysqlConfig = {
+  host: host,
+  user: user,
+  password: password,
+  database: 'airbnb'
+};
 
 const connection = mysql.createConnection(mysqlConfig);
 
