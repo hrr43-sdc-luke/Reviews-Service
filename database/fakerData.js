@@ -1,17 +1,163 @@
 var faker = require('faker');
 
 // var user = {
-//   experience_id: faker.random.number({min:1, max:100});
+//   experience_id: faker.random.number({min:1, max:100}),
 //   username: faker.name.firstName(),
-//   avatar: faker.image.avatar()
+//   avatar: faker.image.avatar(),
 //   date: faker.date.past(2, '2020-02-06');//will need to control the data to make sure they are in semi chrono order as if they are real, so may need to do in batches.
-//   stars: faker.random.number({min:0, max:5});
+//   stars: faker.random.number({min:0, max:5}),
 //   review: faker.lorem.sentence()
 // };
 
 //need at least 2500 reviews.  can do 200/month for the last 13 months
 module.exports.createFakeData = () => {
   let results = [];
+  for (var i = 0; i <= 2600; i++) {
+    if (i < 201) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '20-02-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 200 && i < 401) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '20-01-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 400 && i < 601) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-12-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 600 && i < 801) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-11-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 800 && i < 1001) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-10-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 1000 && i < 1201) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-09-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 1200 && i < 1401) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-08-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 1400 && i < 1601) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-07-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 1600 && i < 1801) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-06-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 1800 && i < 2001) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-05-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 2000 && i < 2201) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-04-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 2200 && i < 2401) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-03-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+    if (i >= 2400) {
+      var user = {
+        experience_id: faker.random.number({min:1, max:100}),
+        username: faker.name.firstName(),
+        avatar: faker.image.avatar(),
+        date: '19-02-01',
+        stars: faker.random.number({min:0, max:5}),
+        review: faker.lorem.sentence()
+      };
+      results.push(user);
+    }
+
+  }
 
   return results;
 }
