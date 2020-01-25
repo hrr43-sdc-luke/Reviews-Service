@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewListItem from './reviewListItem.jsx';
+import PageSelector from './pageSelector.jsx';
 
 function ReviewList(props) {
   return (
@@ -8,7 +9,7 @@ function ReviewList(props) {
       <ReviewListItem key={i} review={review} />
       )}
 
-      <div>{props.currPage}</div>
+      <PageSelector />
     </div>
   )
 }
