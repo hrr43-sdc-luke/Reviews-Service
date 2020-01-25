@@ -8,7 +8,6 @@ app.use(express.static('./public'))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-//write the router functions to call the db/index functions
 app.get('/:id', (req, res) => {
   db.getExpReviews(req.params.id, (err, reviews) => {
     if (err) {
@@ -18,5 +17,9 @@ app.get('/:id', (req, res) => {
     }
   })
 })
+
+//write a router that uses a page number and a experience number and a corresponding function on database/index.js to get that group of reviews.
+
+
 
 app.listen(port, () => { console.log(`Listening on port ${port}`)})
