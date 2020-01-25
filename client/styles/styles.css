@@ -1,0 +1,14 @@
+.aggRating {
+  float: left;
+}
+
+.rightSide {
+  float: right;
+}
+
+.avatar {
+  float: left;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
