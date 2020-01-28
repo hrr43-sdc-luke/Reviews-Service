@@ -1,20 +1,35 @@
 import React from 'react';
 import ReviewList from './reviewList.jsx';
 import PageSelector from './pageSelector.jsx';
+import getReviews from '../apiCalls.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allPreviews: props.reviews,
+      allReviews: props.reviews,
       overallStar: 3.75,
       currPage: 1
     }
+  }
 
+
+  componentDidMount() {
+    let URL = window.location.href.split('/');
+    let expId = URL[URL.length - 1];
+    getReviews(expId, (err, reviews) => {
+      if (err) {
+        console.log(err);
+      } else {
+        this.setState({
+          allReviews: reviews
+        })
+      }
+    });
   }
 
   render() {
-    let reviews = this.state.allPreviews.slice((this.state.currPage - 1) * 5, this.state.currPage * 5);
+    let reviews = this.state.allReviews.slice((this.state.currPage - 1) * 5, this.state.currPage * 5);
 
     return (
       <div>
