@@ -3,7 +3,7 @@ import React from 'react';
 function PageSelector(props) {
   return (
     <div>
-      <p>{props.currPage}</p>
+      <p className="currPage">{props.currPage}</p>
     </div>
   )
 }

@@ -1,13 +1,14 @@
 import React from 'react';
-import ReviewListItem from './reviewListItem.jsx';
-import PageSelector from './pageSelector.jsx';
+import ReviewListItem from './ReviewListItem.jsx';
 
 function ReviewList(props) {
   return (
     <div>
-      {props.reviews.map((review, i) =>
-      <ReviewListItem key={i} review={review} />
-      )}
+      <div className="reviewListItems">
+        {props.reviews.map((review, i) =>
+        <ReviewListItem key={i} review={review} />
+        )}
+      </div>
     </div>
   )
 }

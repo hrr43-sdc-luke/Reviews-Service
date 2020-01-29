@@ -232,4 +232,4 @@ var exampleReviews = [
   }
 ];
 
-ReactDOM.render(<App reviews={exampleReviews}/>, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

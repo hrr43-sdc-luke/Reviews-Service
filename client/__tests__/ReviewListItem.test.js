@@ -3,11 +3,8 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16.1';
 import { shallow } from 'enzyme'
 import ReviewListItem  from '../components/ReviewListItem.jsx';
-// import renderer from 'react-test-renderer';
 
 Enzyme.configure({ adapter: new Adapter() })
-
-
 
 describe('ReviewListItem', () => {
   const wrapper = shallow( <ReviewListItem review={[]} />);
