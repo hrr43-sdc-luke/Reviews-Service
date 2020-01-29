@@ -11,7 +11,7 @@
     "start": "node ./server/index.js",
     "build": "webpack --watch",
     "seed": "node ./database/seedDB/seedDB.js",
-    "test": "jest --coverage --runInBand --detectOpenHandles --watch"
+    "test": "jest --runInBand --detectOpenHandles  --coverage --watchAll=false"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -39,7 +39,8 @@
     "jest-fetch-mock": "^3.0.1",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2",
-    "webpack": "^4.41.5"
+    "webpack": "^4.41.5",
+    "window": "^4.2.6"
   },
   "version": "1.0.0",
   "main": ".eslintrc.js",
