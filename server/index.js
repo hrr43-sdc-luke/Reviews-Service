@@ -4,8 +4,6 @@ const ejs = require('ejs');
 
 app.engine('html', require('ejs').renderFile);
 
-//Placing ejs and render here does not interfere with tesing
-
 app.get('/:id', (req, res) => {
   res.render('../public/index.html');
 })

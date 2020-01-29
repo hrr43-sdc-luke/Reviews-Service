@@ -2,10 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const db = require('../database/index.js');
-// const ejs = require('ejs');
 
-
-// app.engine('html', require('ejs').renderFile);
 app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -19,13 +16,6 @@ app.get('/reviews/:id', (req, res) => {
     }
   })
 })
-
-
-// app.get('/:id', (req, res) => {
-//   res.render('../public/index.html');
-// })
-
-
 
 
 module.exports = app;
