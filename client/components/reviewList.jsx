@@ -8,8 +8,6 @@ function ReviewList(props) {
       {props.reviews.map((review, i) =>
       <ReviewListItem key={i} review={review} />
       )}
-
-      <PageSelector />
     </div>
   )
 }

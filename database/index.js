@@ -15,13 +15,13 @@ const mysqlConfig = {
 
 const connection = mysql.createConnection(mysqlConfig);
 
-connection.connect(err => {
-  if (err) {
-    throw err;
-  } else {
-    console.log('mySQL connected!');
-  }
-})
+// connection.connect(err => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('mySQL connected!');
+//   }
+// })
 
 //create functions to get required info from the db.  see if you can have them coming in descending order by review ID number so the newest is up front.
 const getExpReviews = (expId, callback) => {
@@ -37,5 +37,6 @@ const getExpReviews = (expId, callback) => {
 };
 
 module.exports = {
+  connection: connection,
   getExpReviews: getExpReviews
-}
+};
