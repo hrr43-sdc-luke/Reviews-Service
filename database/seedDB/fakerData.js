@@ -9,7 +9,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '20-02-01',
+        date: '2020-02-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -20,7 +20,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '20-01-01',
+        date: '2020-01-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -31,7 +31,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-12-01',
+        date: '2019-12-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -42,7 +42,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-11-01',
+        date: '2019-11-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -53,7 +53,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-10-01',
+        date: '2019-10-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -64,7 +64,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-09-01',
+        date: '2019-09-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -75,7 +75,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-08-01',
+        date: '2019-08-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -86,7 +86,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-07-01',
+        date: '2019-07-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -97,7 +97,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-06-01',
+        date: '2019-06-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -108,7 +108,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-05-01',
+        date: '2019-05-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -119,7 +119,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-04-01',
+        date: '2019-04-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -130,7 +130,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-03-01',
+        date: '2019-03-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };
@@ -141,7 +141,7 @@ module.exports.createFakeData = () => {
         experience_id: faker.random.number({ min: 1, max: 100 }),
         username: faker.name.firstName(),
         avatar: faker.image.avatar(),
-        date: '19-02-01',
+        date: '2019-02-01',
         stars: faker.random.number({ min: 0, max: 5 }),
         review: faker.lorem.paragraph(),
       };

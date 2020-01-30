@@ -32,11 +32,19 @@
 }
 
 .aggRating {
-  flex: 2 500px;
+
   float: left;
 }
 
 .rightSide {
-  flex: 2 700px;
+
   float: right;
+}
+
+.reviewText {
+  float: left;
+}
+
+.starNum {
+  float: left;
 }
