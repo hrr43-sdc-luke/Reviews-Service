@@ -10,6 +10,10 @@
   float: right;
 }
 
+.reviewStars {
+  color: lightskyblue;
+}
+
 .avatar {
   float: left;
   border-radius: 50%;

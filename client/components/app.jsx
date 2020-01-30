@@ -2,6 +2,7 @@ import React from 'react';
 import ReviewList from './ReviewList.jsx';
 import PageSelector from './PageSelector.jsx';
 import getReviews from '../apiCalls.js';
+import GuestReviews from './guestReviews.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -36,10 +37,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="reviewsModule">
-          <div className="aggRating">
-            <h3>Guest Reviews</h3>
-            <p>{this.state.overallStar}</p>
-          </div>
+          <GuestReviews overallStar={this.state.overallStar} />
           <div className="rightSide">
             <div>
             <ReviewList reviews={this.state.reviews} />
