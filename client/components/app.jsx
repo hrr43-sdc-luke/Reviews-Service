@@ -1,48 +1,50 @@
 import React from 'react';
-import ReviewList from './reviewList.jsx';
-import PageSelector from './pageSelector.jsx';
-import getReviews from '../apiCalls.jsx';
+import ReviewList from './ReviewList.jsx';
+import PageSelector from './PageSelector.jsx';
+import getReviews from '../apiCalls.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       allReviews: props.reviews,
+      reviews: [],
       overallStar: 3.75,
       currPage: 1
     }
   }
 
-
   componentDidMount() {
     let URL = window.location.href.split('/');
     let expId = URL[URL.length - 1];
-    getReviews(expId, (err, reviews) => {
+    getReviews(expId, (err, allReviews) => {
       if (err) {
-        console.log(err);
       } else {
+        let reviews = allReviews.slice((this.state.currPage - 1) * 5, this.state.currPage * 5);
         this.setState({
-          allReviews: reviews
+          allReviews: allReviews,
+          reviews: reviews
         })
       }
     });
   }
 
   render() {
-    let reviews = this.state.allReviews.slice((this.state.currPage - 1) * 5, this.state.currPage * 5);
 
     return (
       <div>
-        <div className="aggRating">
-          <h3>Guest Reviews</h3>
-          <p>{this.state.overallStar}</p>
-        </div>
-        <div className="rightSide">
-          <div>
-          <ReviewList reviews={reviews} />
+        <div className="reviewsModule">
+          <div className="aggRating">
+            <h3>Guest Reviews</h3>
+            <p>{this.state.overallStar}</p>
           </div>
-          <div>
-          <PageSelector currPage={this.state.currPage} />
+          <div className="rightSide">
+            <div>
+            <ReviewList reviews={this.state.reviews} />
+            </div>
+            <div>
+            <PageSelector currPage={this.state.currPage} />
+            </div>
           </div>
         </div>
       </div>

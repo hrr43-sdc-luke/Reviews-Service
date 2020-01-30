@@ -1,6 +1,6 @@
 
 const getReviews = (id, callback) => {
-fetch(`http://localhost:3007/reviews/${id}`)
+fetch(`/reviews/${id}`)
 .then((response) => {
   return response.json();
 })
@@ -12,4 +12,4 @@ fetch(`http://localhost:3007/reviews/${id}`)
 })
 }
 
-export default getReviews;
+module.exports = getReviews;
