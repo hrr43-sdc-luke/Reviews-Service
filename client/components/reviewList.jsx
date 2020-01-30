@@ -6,11 +6,11 @@ function ReviewList(props) {
     <div>
       <div className="reviewListItems">
         {props.reviews.map((review, i) =>
-        <ReviewListItem key={i} review={review} />
+        <ReviewListItem key={i} review={review} />,
         )}
       </div>
     </div>
-  )
+  );
 }
 
 export default ReviewList;

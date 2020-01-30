@@ -7,13 +7,13 @@ function ReviewListItemText(props) {
       <div>
         <p className="reviewText" >{props.text} <button className="moreButton" onClick={() => setShowMore(true) }>More+</button></p>
       </div>
-    )
+    );
   } else {
     return (
       <div>
         <p className="reviewText" >{props.text}</p>
       </div>
-    )
+    );
   }
 }
 

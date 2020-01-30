@@ -5,7 +5,7 @@ function PageSelector(props) {
     <div>
       <p className="currPage">{props.currPage}</p>
     </div>
-  )
+  );
 }
 
 export default PageSelector;

@@ -1,6 +1,6 @@
-const apiCalls = require('../apiCalls.js');
 const request = require('supertest');
 const express = require('express');
+const apiCalls = require('../apiCalls.js');
 
 
 describe('getReviews API', () => {
