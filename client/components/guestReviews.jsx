@@ -8,7 +8,7 @@ function GuestReviews({ overallStar }) {
           <h3>Guest Reviews</h3>
           <div className="starsNum">
             {overallStar}
-            <p>&#9734;&#9734;&#9734;&#9734;&#9734;</p>
+            <p className="aggStars">&#9734;&#9734;&#9734;&#9734;&#9734;</p>
           </div>
         </div>
       </div>
@@ -19,7 +19,12 @@ function GuestReviews({ overallStar }) {
       <div>
         <div className="aggRating">
           <h3>Guest Reviews</h3>
-          <p className="starsNum">{overallStar}<p>&#9733;&#9734;&#9734;&#9734;&#9734;</p></p>
+          <div className="starsNum">
+            {overallStar}
+            <p className="aggStars" >
+              &#9733;&#9734;&#9734;&#9734;&#9734;
+            </p>
+          </div>
         </div>
       </div>
     );
@@ -31,7 +36,7 @@ function GuestReviews({ overallStar }) {
           <h3>Guest Reviews</h3>
           <div className="starsNum">
             {overallStar}
-            <p>&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+            <p className="aggStars" >&#9733;&#9733;&#9734;&#9734;&#9734;</p>
           </div>
         </div>
       </div>
@@ -42,7 +47,7 @@ function GuestReviews({ overallStar }) {
       <div>
         <div className="aggRating">
           <h3>Guest Reviews</h3>
-          <p className="starsNum">{overallStar}<p>&#9733;&#9733;&#9733;&#9734;&#9734;</p></p>
+          <div className="starsNum">{overallStar}<p className="aggStars" >&#9733;&#9733;&#9733;&#9734;&#9734;</p></div>
         </div>
       </div>
     );
@@ -52,7 +57,7 @@ function GuestReviews({ overallStar }) {
       <div>
         <div className="aggRating">
           <h3>Guest Reviews</h3>
-          <p className="starsNum">{overallStar}<p>&#9733;&#9733;&#9733;&#9733;&#9734;</p></p>
+          <div className="starsNum">{overallStar}<p className="aggStars" >&#9733;&#9733;&#9733;&#9733;&#9734;</p></div>
         </div>
       </div>
     );
@@ -62,7 +67,7 @@ function GuestReviews({ overallStar }) {
       <div>
         <div className="aggRating">
           <h3>Guest Reviews</h3>
-          <p className="starsNum">{overallStar}<p>&#9733;&#9733;&#9733;&#9733;&#9733;</p></p>
+          <div className="starsNum">{overallStar}<p className="aggStars" >&#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
         </div>
       </div>
     );
