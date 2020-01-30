@@ -9,21 +9,23 @@ class App extends React.Component {
     this.state = {
       allReviews: props.reviews,
       reviews: [],
-      overallStar: 3.75,
+      overallStar: 0,
       currPage: 1
     }
   }
 
   componentDidMount() {
-    let URL = window.location.href.split('/');
-    let expId = URL[URL.length - 1];
-    getReviews(expId, (err, allReviews) => {
+    getReviews(this.props.expId, (err, allReviews) => {
       if (err) {
       } else {
+        let reducer = (accumulator, currentValue) => accumulator + currentValue.stars;
+        let totalStars = allReviews.reduce(reducer, 0);
+        let aggStars = (totalStars / allReviews.length).toFixed(2);
         let reviews = allReviews.slice((this.state.currPage - 1) * 5, this.state.currPage * 5);
         this.setState({
           allReviews: allReviews,
-          reviews: reviews
+          reviews: reviews,
+          overallStar: aggStars
         })
       }
     });

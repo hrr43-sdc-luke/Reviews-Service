@@ -1,3 +1,7 @@
+.reviewsModule {
+  display: flexbox;
+}
+
 .aggRating {
   float: left;
 }
@@ -13,6 +17,18 @@
   width: 30px;
 }
 
+.username {
+  float: left;
+}
+
+.date {
+  float: left;
+}
+
 .avatar:hover {
+  cursor: pointer;
+}
+
+.username:hover {
   cursor: pointer;
 }
