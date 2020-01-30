@@ -10,7 +10,7 @@ describe('ReviewListItem', () => {
   const wrapper = shallow( <ReviewListItem review={[]} />);
 
   it('ReviewListItem should have an avatar image', () => {
-    const image = wrapper.find('div img');
+    const image = wrapper.find('.avatar');
     expect(image).toExist();
   });
 
