@@ -9,7 +9,7 @@ CREATE TABLE reviews (
   avatar VARCHAR(150) NOT NULL,
   date DATE NOT NULL,
   stars INTEGER NOT NULL,
-  review VARCHAR(255) NOT NULL,
+  review VARCHAR(400) NOT NULL,
   PRIMARY KEY(id)
 );
 

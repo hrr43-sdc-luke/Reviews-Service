@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const mysqlConfig = require('./config.js');
+const mysqlConfig = require('../config.js');
 const fakerData = require('./fakerData.js');
 
 const connection = mysql.createConnection(mysqlConfig);

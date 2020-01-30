@@ -1,14 +1,8 @@
 .reviewsModule {
-  display: flexbox;
+  display: flex;
+  align-items: left;
 }
 
-.aggRating {
-  float: left;
-}
-
-.rightSide {
-  float: right;
-}
 
 .reviewStars {
   color: lightskyblue;
@@ -35,4 +29,14 @@
 
 .username:hover {
   cursor: pointer;
+}
+
+.aggRating {
+  flex: 2 500px;
+  float: left;
+}
+
+.rightSide {
+  flex: 2 700px;
+  float: right;
 }
