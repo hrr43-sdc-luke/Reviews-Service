@@ -2,7 +2,7 @@ import React from 'react';
 import ReviewList from './ReviewList.jsx';
 import PageSelector from './PageSelector.jsx';
 import getReviews from '../apiCalls.js';
-import GuestReviews from './guestReviews.jsx'
+import GuestReviews from './GuestReviews.jsx'
 
 class App extends React.Component {
   constructor(props) {

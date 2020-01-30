@@ -1,4 +1,5 @@
 import React from 'react';
+import ReviewListItemText from './ReviewListItemText.jsx';
 
 function ReviewListItem(props) {
   return (
@@ -9,7 +10,7 @@ function ReviewListItem(props) {
       <div>
         <p className="reviewStars">{props.review.stars} &#11089;&#11089;&#11090;&#11090;&#11090;</p>
       </div>
-      <p className="reviewText" >{props.review.review}</p>
+      <ReviewListItemText text={props.review.review} />
     </div>
   )
 }
