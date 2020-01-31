@@ -11,7 +11,16 @@ function ReviewList({ reviews }) {
           const monthIdx = parseInt(dateArr[1]) - 1;
           const month = months[monthIdx];
           const year = review.date.slice(0, 4);
-          return <ReviewListItem key={i} review={review} month={month} year={year} />;
+          return (
+            <ReviewListItem
+              key={review.id}
+              review={review}
+              idx={i}
+              stars={review.stars}
+              month={month}
+              year={year}
+            />
+          );
         })}
       </div>
     </div>

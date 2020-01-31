@@ -44,15 +44,6 @@
   cursor: pointer;
 }
 
-.aggRating {
-  float: left;
-}
-
-.aggStars {
-  color: rgb(0, 124, 128);
-  vertical-align: text-bottom;
-}
-
 .rightSide {
   box-sizing: border-box;
   max-width: 700px;
@@ -64,10 +55,24 @@
   box-sizing: border-box;
 }
 
-.starsNum {
+.aggRating {
   float: left;
+}
+
+.aggStars {
+  color: rgb(0, 124, 128);
+  vertical-align: top;
+}
+
+.aggNum {
+  float: left;
+  margin: 0px 5px 0px 0px;
+  font-size: 20px;
+  vertical-align: bottom;
+}
+
+.starsNum {
   font-weight: 600;
-  vertical-align: text-bottom;
 }
 
 .currPage {
@@ -91,8 +96,9 @@ button:hover {
   text-decoration: none;
 }
 
-.reviewListItems {
-  box-sizing: border-box;
+.line {
+  width: auto;
+  border-bottom: 1px solid darkgray;
 }
 
 .reviewStars {
@@ -102,9 +108,17 @@ button:hover {
 .next {
   border-radius: 75%;
   border: 1px solid rgb(0, 124, 128);
+  text-decoration: none;
 }
 
 .previous {
   border-radius: 75%;
   border: 1px solid rgb(0, 124, 128);
+  margin: 0px 5px 0px 0px;
+  text-decoration: none;
+}
+
+.reviewListItems {
+  box-sizing: border-box;
+  height: auto;
 }

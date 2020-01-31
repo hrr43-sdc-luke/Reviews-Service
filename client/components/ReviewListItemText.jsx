@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
-function ReviewListItemText({ text }) {
+// add logice to show the "line" for key 0-3, but not 4
+
+function ReviewListItemText({ text, idx }) {
   const [showMore, setShowMore] = useState(false);
   if (showMore === false) {
     if (text.length > 250) {
@@ -17,6 +19,7 @@ function ReviewListItemText({ text }) {
               +More
             </button>
           </p>
+          {/* <div className="line" /> */}
         </div>
       );
     }
@@ -26,6 +29,7 @@ function ReviewListItemText({ text }) {
           <p className="reviewText">
             {text}
           </p>
+          {/* <div className="line" /> */}
         </div>
       );
     }
@@ -33,6 +37,7 @@ function ReviewListItemText({ text }) {
     return (
       <div>
         <p className="reviewText">{text}</p>
+        {/* <div className="line" /> */}
       </div>
     );
   }

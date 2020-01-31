@@ -51,12 +51,14 @@ function GuestReviews({ overallStar }) {
       <div className="guestReviews">
         <div className="aggRating">
           <h2>Guest reviews</h2>
-          <div className="starsNum">
-            {overallStar}
-          </div>
-          <div className="aggStars">
-            &#9733;&#9733;&#9733;&#9734;&#9734;
-          </div>
+          <span className="starsNum">
+            <div className="aggNum">
+              {overallStar}
+            </div>
+            <div className="aggStars">
+              &#9733;&#9733;&#9733;&#9734;&#9734;
+            </div>
+          </span>
         </div>
       </div>
     );
