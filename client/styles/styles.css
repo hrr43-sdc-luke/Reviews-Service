@@ -3,6 +3,12 @@
   align-items: left;
 }
 
+.guestReviews {
+  box-sizing: border-box;
+  /* position: fixed; */
+  min-width: 250px;
+  max-width: 500px;
+}
 
 .reviewStars {
   color: rgb(0, 124, 128);
@@ -15,41 +21,90 @@
   width: 30px;
 }
 
+.avatar:hover {
+  cursor: pointer;
+}
+
+.nameDate {
+  font-size: 12px;
+}
+
 .username {
   float: left;
+  font-weight: 600;
+  margin: 0px 5px 3px 10px;
 }
 
 .date {
   float: left;
-}
-
-.avatar:hover {
-  cursor: pointer;
+  margin: 0px 5px 3px 10px;
 }
 
 .username:hover {
   cursor: pointer;
 }
 
-.aggStars {
-  color: rgb(0, 124, 128);
+.aggRating {
   float: left;
 }
 
-.rightSide {
+.aggStars {
+  color: rgb(0, 124, 128);
+  vertical-align: text-bottom;
+}
 
+.rightSide {
+  box-sizing: border-box;
+  max-width: 700px;
   float: right;
 }
 
 .reviewText {
   float: left;
+  box-sizing: border-box;
 }
 
 .starsNum {
   float: left;
+  font-weight: 600;
+  vertical-align: text-bottom;
 }
 
-.moreButton {
+.currPage {
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(0, 124, 128);
+}
+
+button {
   border: none;
   color: rgb(0, 124, 128);
+}
+
+button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dots:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+.reviewListItems {
+  box-sizing: border-box;
+}
+
+.reviewStars {
+  position: initial;
+}
+
+.next {
+  border-radius: 75%;
+  border: 1px solid rgb(0, 124, 128);
+}
+
+.previous {
+  border-radius: 75%;
+  border: 1px solid rgb(0, 124, 128);
 }

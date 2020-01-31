@@ -4,9 +4,9 @@ import ReviewStars from './ReviewStars.jsx';
 function NameDateStars({ review, month, year}) {
   return (
     <div>
-      <div>
+      <div className="nameDate">
         <p className="username">{review.username}</p>
-          <p className="date">{month}{year}</p>
+          <p className="date">{month + ' '}{year}</p>
       </div>
         <ReviewStars stars={review.stars} />
     </div>

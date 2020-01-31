@@ -4,7 +4,7 @@ import ReviewListItem from './ReviewListItem.jsx';
 function ReviewList({ reviews }) {
   return (
     <div>
-      <div className='reviewListItems'>
+      <div className="reviewListItems">
         {reviews.map((review, i) => {
           const dateArr = review.date.split('-');
           const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -12,8 +12,7 @@ function ReviewList({ reviews }) {
           const month = months[monthIdx];
           const year = review.date.slice(0, 4);
           return <ReviewListItem key={i} review={review} month={month} year={year} />;
-        },
-        )}
+        })}
       </div>
     </div>
   );

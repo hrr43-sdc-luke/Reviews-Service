@@ -1,26 +1,38 @@
 import React, { useState } from 'react';
 
-function ReviewListItemText(props) {
+function ReviewListItemText({ text }) {
   const [showMore, setShowMore] = useState(false);
   if (showMore === false) {
-    if (props.text.length > 250) {
+    if (text.length > 250) {
       return (
         <div>
-          <p className="reviewText" >{props.text.slice(0, 250)}... <button className="moreButton" onClick={() => setShowMore(true) }>More+</button></p>
+          <p className="reviewText">
+            {text.slice(0, 250)}
+            ...
+            <button
+              className="moreButton"
+              type="button"
+              onClick={() => setShowMore(true)}
+            >
+              +More
+            </button>
+          </p>
         </div>
       );
     }
-    if (props.text.length <= 250) {
+    if (text.length <= 250) {
       return (
         <div>
-          <p className="reviewText" >{props.text} </p>
+          <p className="reviewText">
+            {text}
+          </p>
         </div>
       );
     }
   } else {
     return (
       <div>
-        <p className="reviewText" >{props.text}</p>
+        <p className="reviewText">{text}</p>
       </div>
     );
   }

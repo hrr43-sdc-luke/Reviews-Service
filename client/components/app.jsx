@@ -12,22 +12,25 @@ class App extends React.Component {
       reviews: [],
       overallStar: 0,
       currPage: 1,
+      totalPages: 0,
     };
   }
 
   componentDidMount() {
-    getReviews(this.props.expId, (err, allReviews) => {
+    getReviews(this.props.expId, (err, allRevs) => {
       if (err) {
         console.log(err);
       } else {
         const reducer = (accumulator, currentValue) => accumulator + currentValue.stars;
-        const totalStars = allReviews.reduce(reducer, 0);
-        const aggStars = (totalStars / allReviews.length).toFixed(2);
-        const reviews = allReviews.slice((this.state.currPage - 1) * 5, this.state.currPage * 5);
+        const totalStars = allRevs.reduce(reducer, 0);
+        const aggStars = (totalStars / allRevs.length).toFixed(2);
+        const revs = allRevs.slice((this.state.currPage - 1) * 5, this.state.currPage * 5);
+        const totalPgs = Math.ceil(allRevs.length / 5)
         this.setState({
-          allReviews: allReviews,
-          reviews: reviews,
+          allReviews: allRevs,
+          reviews: revs,
           overallStar: aggStars,
+          totalPages: totalPgs,
         });
       }
     });
@@ -43,14 +46,13 @@ class App extends React.Component {
             <ReviewList reviews={this.state.reviews} />
             </div>
             <div>
-            <PageSelector currPage={this.state.currPage} />
+            <PageSelector currPage={this.state.currPage} totalPages={this.state.totalPages} />
             </div>
           </div>
         </div>
       </div>
     );
   }
-
 }
 
 export default App;

@@ -3,7 +3,7 @@ const faker = require('faker');
 // need at least 2500 reviews.  can do 200/month for the last 13 months
 module.exports.createFakeData = () => {
   const results = [];
-  for (var i = 0; i <= 2600; i++) {
+  for (let i = 0; i <= 2600; i += 1) {
     if (i < 201) {
       const user = {
         experience_id: faker.random.number({ min: 1, max: 100 }),
@@ -149,4 +149,4 @@ module.exports.createFakeData = () => {
     }
   }
   return results;
-}
+};
