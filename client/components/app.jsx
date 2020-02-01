@@ -40,18 +40,10 @@ class App extends React.Component {
   }
 
   jumpToPage(page) {
-    const { currentReviews } = this;
-    const revs = currentReviews(page);
+    const { allReviews } = this.state;
+    const revs = allReviews.slice((page - 1) * 5, page * 5);
     this.setState({
       currPage: page,
-      reviews: revs,
-    });
-  }
-
-  currentReviews(currPage) {
-    const { allReviews } = this.state;
-    const revs = allReviews.slice((currPage - 1) * 5, currPage * 5);
-    this.setState({
       reviews: revs,
     });
   }
@@ -69,7 +61,7 @@ class App extends React.Component {
             <div>
               <ReviewList reviews={reviews} />
             </div>
-            <div>
+            <div className="pageSelector">
               <PageSelector
                 currPage={currPage}
                 totalPages={totalPages}

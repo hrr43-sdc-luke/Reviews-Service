@@ -32,7 +32,7 @@
 .username {
   float: left;
   font-weight: 600;
-  margin: 0px 5px 3px 10px;
+  margin: 0px 0px 3px 10px;
 }
 
 .date {
@@ -121,4 +121,12 @@ button:hover {
 .reviewListItems {
   box-sizing: border-box;
   height: auto;
+}
+
+.pageSelector {
+  float: left;
+}
+
+button:focus {
+  outline: none;
 }

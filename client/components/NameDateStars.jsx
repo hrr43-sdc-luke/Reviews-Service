@@ -6,10 +6,10 @@ function NameDateStars({ review, month, year, stars }) {
     <div>
       <div className="nameDate">
         <p className="username">
-          {review.username + '·'}
+          {review.username}
         </p>
         <p className="date">
-          {month + ' '}
+          ·  {month + ' '}
           {year}
         </p>
       </div>
