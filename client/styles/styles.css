@@ -1,5 +1,6 @@
 .reviewsModule {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
@@ -13,6 +14,8 @@
 
 .aggRating {
   float: left;
+  position: sticky;
+  top: 10px;
 }
 
 .aggStars {

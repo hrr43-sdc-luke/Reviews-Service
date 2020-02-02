@@ -209,7 +209,7 @@ function PageSelector({
           <button
             className="pages"
             type="button"
-            onClick={() => { jumpToPage(currPage - 1); }}
+            onClick={() => { jumpToPage(currPage + 1); }}
           >
             {currPage + 1}
           </button>
