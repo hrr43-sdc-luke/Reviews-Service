@@ -1,13 +1,12 @@
 import React from 'react';
-import Enzyme from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16.1';
-import { shallow } from 'enzyme'
-import ReviewListItem  from '../components/ReviewListItem.jsx';
+import ReviewListItem from '../components/ReviewListItem.jsx';
 
-Enzyme.configure({ adapter: new Adapter() })
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('ReviewListItem', () => {
-  const wrapper = shallow( <ReviewListItem review={[]} />);
+  const wrapper = shallow(<ReviewListItem review={[]} />);
 
   it('ReviewListItem should have an avatar image', () => {
     const image = wrapper.find('.avatar');
@@ -28,6 +27,4 @@ describe('ReviewListItem', () => {
     const stars = wrapper.find('.reviewStars');
     expect(stars).toExist();
   });
-
 });
-

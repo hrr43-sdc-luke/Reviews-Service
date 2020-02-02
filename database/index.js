@@ -2,40 +2,40 @@ const mysql = require('mysql');
 
 const localMysqlConfig = require('./config.js');
 
-const host = process.env.DB_URL || localMysqlConfig.host;
-const user = process.env.DB_User || localMysqlConfig.user;
-const password = process.env.DB_PW || localMysqlConfig.password;
+const hostURL = process.env.DB_URL || localMysqlConfig.host;
+const username = process.env.DB_User || localMysqlConfig.user;
+const pw = process.env.DB_PW || localMysqlConfig.password;
 
 const mysqlConfig = {
-  host: host,
-  user: user,
-  password: password,
-  database: 'airbnb'
+  host: hostURL,
+  user: username,
+  password: pw,
+  database: 'airbnb',
 };
 
-const connection = mysql.createConnection(mysqlConfig);
+const dbConnection = mysql.createConnection(mysqlConfig);
 
-connection.connect(err => {
+dbConnection.connect((err) => {
   if (err) {
     console.log(err);
   } else {
     console.log('mySQL connected!');
   }
-})
+});
 
-const getExpReviews = (expId, callback) => {
-  let query = 'select * from reviews where experience_id = ?';
-  let experience_id = expId;
-  connection.query(query, experience_id, (err, response) => {
+const getAllExpReviews = (expId, callback) => {
+  const query = 'select * from reviews where experience_id = ?';
+  const experienceId = expId;
+  dbConnection.query(query, experienceId, (err, response) => {
     if (err) {
       callback(err);
     } else {
       callback(null, response);
     }
-  })
+  });
 };
 
 module.exports = {
-  connection: connection,
-  getExpReviews: getExpReviews
+  connection: dbConnection,
+  getExpReviews: getAllExpReviews,
 };

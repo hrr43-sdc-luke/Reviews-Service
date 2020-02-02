@@ -1,9 +1,50 @@
+.reviewsModule {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.guestReviews {
+  flex: 1 1 150px;
+  max-width: 330px;
+  color: rgba(80, 79, 79, 0.993);
+}
+
 .aggRating {
   float: left;
+  position: sticky;
+  top: 10px;
+}
+
+.aggStars {
+  color: rgb(0, 124, 128);
+}
+
+.aggNum {
+  float: left;
+  margin-right: 5px;
+  font-size: 20px;
 }
 
 .rightSide {
-  float: right;
+  flex: 2 1 380px;
+  max-width: 780px;
+}
+
+.nameDateStars {
+  max-width: 200px;
+}
+
+.nameDate {
+  font-size: 12px;
+  color: rgba(80, 79, 79, 0.993);
+}
+
+.reviewStars {
+  color: rgb(0, 124, 128);
+  padding-left: 40px;
 }
 
 .avatar {
@@ -15,4 +56,99 @@
 
 .avatar:hover {
   cursor: pointer;
+}
+
+.username {
+  float: left;
+  font-weight: 600;
+  margin: 0px 0px 3px 10px;
+}
+
+.date {
+  float: left;
+  margin: 0px 5px 3px 5px;
+}
+
+.username:hover {
+  cursor: pointer;
+}
+
+.reviewText {
+  justify-self: left;
+  color: rgba(80, 79, 79, 0.993);
+  font-size: 14px;
+  margin-top: 0px;
+}
+
+.dot {
+  float: left;
+  margin-right: 5px;
+}
+
+.starsNum {
+  font-weight: 600;
+}
+
+.currPage {
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(0, 124, 128);
+}
+
+button {
+  border: none;
+  color: rgb(0, 124, 128);
+}
+
+button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dots:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+.line {
+  width: auto;
+  border-bottom: 1px solid darkgray;
+  padding-bottom: 10px;
+}
+
+.reviewStars {
+  position: initial;
+}
+
+.next {
+  border-radius: 75%;
+  border: 1px solid rgb(0, 124, 128);
+  text-decoration: none;
+}
+
+.previous {
+  border-radius: 75%;
+  border: 1px solid rgb(0, 124, 128);
+  margin: 0px 5px 0px 0px;
+  text-decoration: none;
+}
+
+.reviewListItems {
+  box-sizing: border-box;
+  justify-items: left;
+  height: auto;
+}
+
+.reviewListItem {
+  box-sizing: border-box;
+  justify-self: left;
+  height: auto;
+}
+
+.pageSelector {
+  justify-self: left;
+}
+
+button:focus {
+  outline: none;
 }
