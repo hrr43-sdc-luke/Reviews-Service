@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16.1';
 import ReviewList from '../components/ReviewList.jsx';
 
-Enzyme.configure({ adapter: new Adapter() })
+Enzyme.configure({ adapter: new Adapter() });
 
 describe("ReviewList", () => {
   const reviewsArr = [
