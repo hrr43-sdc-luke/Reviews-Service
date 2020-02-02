@@ -1,15 +1,40 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import ReviewListItemText from './ReviewListItemText.jsx';
+import NameDateStars from './NameDateStars.jsx';
 
-function ReviewListItem(props) {
+function ReviewListItem({
+  review, stars, month, year, idx,
+}) {
   return (
-    <div>
-      <img className="avatar" src={props.review.avatar}></img>
-      <h4 className="username">{props.review.username}</h4> <p>{props.review.date}</p>
-      <h4 className="reviewStars">{props.review.stars}</h4>
-
-      <p className="reviewText" >{props.review.review}</p>
+    <div className="ReviewListItem">
+      <img
+        className="avatar"
+        src={review.avatar}
+        alt="Smiley face"
+      />
+      <div className="nameDateStars">
+        <NameDateStars username={review.username} stars={stars} year={year} month={month} />
+      </div>
+      <ReviewListItemText text={review.review} idx={idx} />
     </div>
-  )
+  );
 }
+
+ReviewListItem.propTypes = {
+  review: PropTypes.exact({
+    id: PropTypes.number.isRequired,
+    experience_id: PropTypes.number.isRequired,
+    username: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    stars: PropTypes.number.isRequired,
+    review: PropTypes.string.isRequired,
+  }).isRequired,
+  stars: PropTypes.number.isRequired,
+  month: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
+  idx: PropTypes.number.isRequired,
+};
 
 export default ReviewListItem;

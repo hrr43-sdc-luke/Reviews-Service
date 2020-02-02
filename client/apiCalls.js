@@ -1,15 +1,13 @@
+import axios from 'axios';
 
 const getReviews = (id, callback) => {
-fetch(`/reviews/${id}`)
-.then((response) => {
-  return response.json();
-})
-.then((reviews) => {
-  callback(null, reviews);
-})
-.catch((err) => {
-  callback(err);
-})
-}
+  axios.get(`/reviews/${id}`)
+    .then((reviews) => {
+      callback(null, reviews.data);
+    })
+    .catch((err) => {
+      callback(err);
+    });
+};
 
-module.exports = getReviews;
+export default getReviews;

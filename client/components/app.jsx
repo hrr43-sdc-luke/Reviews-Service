@@ -1,56 +1,83 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReviewList from './ReviewList.jsx';
 import PageSelector from './PageSelector.jsx';
 import getReviews from '../apiCalls.js';
+import GuestReviews from './GuestReviews.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allReviews: props.reviews,
+      allReviews: [],
       reviews: [],
-      overallStar: 3.75,
-      currPage: 1
-    }
+      overallStar: 0,
+      currPage: 1,
+      totalPages: 0,
+    };
+    this.jumpToPage = this.jumpToPage.bind(this);
   }
 
   componentDidMount() {
-    let URL = window.location.href.split('/');
-    let expId = URL[URL.length - 1];
-    getReviews(expId, (err, allReviews) => {
+    const { currPage } = this.state;
+    const { expId } = this.props;
+    getReviews(expId, (err, allRevs) => {
       if (err) {
+        console.log(err);
       } else {
-        let reviews = allReviews.slice((this.state.currPage - 1) * 5, this.state.currPage * 5);
+        const reducer = (accumulator, currentValue) => accumulator + currentValue.stars;
+        const totalStars = allRevs.reduce(reducer, 0);
+        const aggStars = (totalStars / allRevs.length).toFixed(2);
+        const revs = allRevs.slice((currPage - 1) * 5, currPage * 5);
+        const totalPgs = Math.ceil(allRevs.length / 5);
         this.setState({
-          allReviews: allReviews,
-          reviews: reviews
-        })
+          allReviews: allRevs,
+          reviews: revs,
+          overallStar: aggStars,
+          totalPages: totalPgs,
+        });
       }
     });
   }
 
-  render() {
+  jumpToPage(page) {
+    const { allReviews } = this.state;
+    const revs = allReviews.slice((page - 1) * 5, page * 5);
+    this.setState({
+      currPage: page,
+      reviews: revs,
+    });
+  }
 
+  render() {
+    const {
+      overallStar, reviews, currPage, totalPages,
+    } = this.state;
+    const { jumpToPage } = this;
     return (
       <div>
         <div className="reviewsModule">
-          <div className="aggRating">
-            <h3>Guest Reviews</h3>
-            <p>{this.state.overallStar}</p>
-          </div>
+          <GuestReviews overallStar={overallStar} />
           <div className="rightSide">
             <div>
-            <ReviewList reviews={this.state.reviews} />
+              <ReviewList reviews={reviews} />
             </div>
-            <div>
-            <PageSelector currPage={this.state.currPage} />
+            <div className="pageSelector">
+              <PageSelector
+                currPage={currPage}
+                totalPages={totalPages}
+                jumpToPage={jumpToPage}
+              />
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
-
 }
 
-export default App
+App.propTypes = {
+  expId: PropTypes.string.isRequired,
+};
+
+export default App;
