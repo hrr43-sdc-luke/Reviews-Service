@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function PageSelector({
   currPage, totalPages, jumpToPage,
@@ -1199,5 +1200,11 @@ function PageSelector({
     </div>
   );
 }
+
+PageSelector.propTypes = {
+  currPage: PropTypes.number.isRequired,
+  totalPages: PropTypes.number.isRequired,
+  jumpToPage: PropTypes.func.isRequired,
+};
 
 export default PageSelector;

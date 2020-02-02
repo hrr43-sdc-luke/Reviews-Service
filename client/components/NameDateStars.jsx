@@ -1,21 +1,34 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReviewStars from './ReviewStars.jsx';
 
-function NameDateStars({ review, month, year, stars }) {
+function NameDateStars({
+  username, month, year, stars,
+}) {
   return (
     <div>
       <div className="nameDate">
         <p className="username">
-          {review.username}
+          {username}
         </p>
-        <p className="date">
-          ·  {month + ' '}
+        <div className="date">
+          <div className="dot">&#183;</div>
+          {month}
           {year}
-        </p>
+        </div>
       </div>
-      <ReviewStars stars={stars} />
+      <div className="reviewStars">
+        <ReviewStars stars={stars} />
+      </div>
     </div>
   );
 }
+
+NameDateStars.propTypes = {
+  username: PropTypes.string.isRequired,
+  month: PropTypes.string.isRequired,
+  year: PropTypes.string.isRequired,
+  stars: PropTypes.number.isRequired,
+};
 
 export default NameDateStars;

@@ -1,17 +1,47 @@
 .reviewsModule {
   display: flex;
-  align-items: left;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .guestReviews {
-  box-sizing: border-box;
-  /* position: fixed; */
-  min-width: 250px;
-  max-width: 500px;
+  flex: 1 1 150px;
+  max-width: 330px;
+  color: rgba(80, 79, 79, 0.993);
+}
+
+.aggRating {
+  float: left;
+}
+
+.aggStars {
+  color: rgb(0, 124, 128);
+}
+
+.aggNum {
+  float: left;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.rightSide {
+  flex: 2 1 380px;
+  max-width: 780px;
+}
+
+.nameDateStars {
+  max-width: 200px;
+}
+
+.nameDate {
+  font-size: 12px;
+  color: rgba(80, 79, 79, 0.993);
 }
 
 .reviewStars {
   color: rgb(0, 124, 128);
+  padding-left: 40px;
 }
 
 .avatar {
@@ -25,10 +55,6 @@
   cursor: pointer;
 }
 
-.nameDate {
-  font-size: 12px;
-}
-
 .username {
   float: left;
   font-weight: 600;
@@ -37,38 +63,23 @@
 
 .date {
   float: left;
-  margin: 0px 5px 3px 10px;
+  margin: 0px 5px 3px 5px;
 }
 
 .username:hover {
   cursor: pointer;
 }
 
-.rightSide {
-  box-sizing: border-box;
-  max-width: 700px;
-  float: right;
-}
-
 .reviewText {
-  float: left;
-  box-sizing: border-box;
+  justify-self: left;
+  color: rgba(80, 79, 79, 0.993);
+  font-size: 14px;
+  margin-top: 0px;
 }
 
-.aggRating {
+.dot {
   float: left;
-}
-
-.aggStars {
-  color: rgb(0, 124, 128);
-  vertical-align: top;
-}
-
-.aggNum {
-  float: left;
-  margin: 0px 5px 0px 0px;
-  font-size: 20px;
-  vertical-align: bottom;
+  margin-right: 5px;
 }
 
 .starsNum {
@@ -99,6 +110,7 @@ button:hover {
 .line {
   width: auto;
   border-bottom: 1px solid darkgray;
+  padding-bottom: 10px;
 }
 
 .reviewStars {
@@ -120,11 +132,18 @@ button:hover {
 
 .reviewListItems {
   box-sizing: border-box;
+  justify-items: left;
+  height: auto;
+}
+
+.reviewListItem {
+  box-sizing: border-box;
+  justify-self: left;
   height: auto;
 }
 
 .pageSelector {
-  float: left;
+  justify-self: left;
 }
 
 button:focus {

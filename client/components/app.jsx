@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReviewList from './ReviewList.jsx';
 import PageSelector from './PageSelector.jsx';
-import getReviews from '../apiCalls.jsx';
+import getReviews from '../apiCalls.js';
 import GuestReviews from './GuestReviews.jsx';
 
 class App extends React.Component {
@@ -74,5 +75,9 @@ class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  expId: PropTypes.string.isRequired,
+};
 
 export default App;

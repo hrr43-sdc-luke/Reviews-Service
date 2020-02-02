@@ -1,4 +1,3 @@
-const ejs = require('ejs');
 const app = require('./app.js');
 
 const port = process.env.PORT || 3007;

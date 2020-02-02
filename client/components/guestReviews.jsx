@@ -5,12 +5,14 @@ function GuestReviews({ overallStar }) {
     return (
       <div className="guestReviews">
         <div className="aggRating">
-          <h4>Guest reviews</h4>
+          <h2>Guest reviews</h2>
           <div className="starsNum">
-            {overallStar}
-          </div>
-          <div className="aggStars">
+            <div className="aggNum">
+              {overallStar}
+            </div>
+            <div className="aggStars">
             &#9734;&#9734;&#9734;&#9734;&#9734;
+            </div>
           </div>
         </div>
       </div>
@@ -20,12 +22,14 @@ function GuestReviews({ overallStar }) {
     return (
       <div className="guestReviews">
         <div className="aggRating">
-          <h3>Guest Reviews</h3>
+          <h2>Guest reviews</h2>
           <div className="starsNum">
-            {overallStar}
-            <p className="aggStars">
+            <div className="aggNum">
+              {overallStar}
+            </div>
+            <div className="aggStars">
               &#9733;&#9734;&#9734;&#9734;&#9734;
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -35,12 +39,14 @@ function GuestReviews({ overallStar }) {
     return (
       <div className="guestReviews">
         <div className="aggRating">
-          <h3>Guest Reviews</h3>
+          <h2>Guest reviews</h2>
           <div className="starsNum">
-            {overallStar}
-          </div>
-          <div className="aggStars">
+            <div className="aggNum">
+              {overallStar}
+            </div>
+            <div className="aggStars">
             &#9733;&#9733;&#9734;&#9734;&#9734;
+            </div>
           </div>
         </div>
       </div>
@@ -51,14 +57,14 @@ function GuestReviews({ overallStar }) {
       <div className="guestReviews">
         <div className="aggRating">
           <h2>Guest reviews</h2>
-          <span className="starsNum">
+          <div className="starsNum">
             <div className="aggNum">
               {overallStar}
             </div>
             <div className="aggStars">
               &#9733;&#9733;&#9733;&#9734;&#9734;
             </div>
-          </span>
+          </div>
         </div>
       </div>
     );
@@ -67,12 +73,14 @@ function GuestReviews({ overallStar }) {
     return (
       <div className="guestReviews">
         <div className="aggRating">
-          <h3>Guest Reviews</h3>
+          <h2>Guest reviews</h2>
           <div className="starsNum">
-            {overallStar}
-          </div>
-          <div className="aggStars">
+            <div className="aggNum">
+              {overallStar}
+            </div>
+            <div className="aggStars">
             &#9733;&#9733;&#9733;&#9733;&#9734;
+            </div>
           </div>
         </div>
       </div>
@@ -82,12 +90,14 @@ function GuestReviews({ overallStar }) {
     return (
       <div className="guestReviews">
         <div className="aggRating">
-          <h3>Guest Reviews</h3>
+          <h2>Guest reviews</h2>
           <div className="starsNum">
-            {overallStar}
-          </div>
-          <div className="aggStars">
+            <div className="aggNum">
+              {overallStar}
+            </div>
+            <div className="aggStars">
             &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
           </div>
         </div>
       </div>
