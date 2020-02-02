@@ -15,13 +15,13 @@ const mysqlConfig = {
 
 const dbConnection = mysql.createConnection(mysqlConfig);
 
-dbConnection.connect((err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('mySQL connected!');
-  }
-});
+// dbConnection.connect((err) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log('mySQL connected!');
+//   }
+// });
 
 const getAllExpReviews = (expId, callback) => {
   const query = 'select * from reviews where experience_id = ?';

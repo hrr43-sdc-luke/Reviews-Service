@@ -5,26 +5,28 @@ import ReviewListItem from '../components/ReviewListItem.jsx';
 
 Enzyme.configure({ adapter: new Adapter() });
 
+
 describe('ReviewListItem', () => {
-  const wrapper = shallow(<ReviewListItem review={[]} />);
+  const testReview = {
+    id: 1,
+    experience_id: 5,
+    username: 'Bob',
+    avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/a1chapone/128.jpg",
+    date: "2020-02-01",
+    stars: 5,
+    review: "Ut nemo consectetur commodi quia saepe earum. Cupiditate culpa rerum et omnis ipsam tempore aut. Sequi nulla sunt id excepturi aliquid consequatur dolor.",
+  };
+  const stars = 5;
+  const month = "February";
+  const year = "2020";
+  const idx = 0;
+  const wrapper = shallow(<ReviewListItem review={testReview} stars={stars} month={month} year={year} idx={idx} />);
 
-  it('ReviewListItem should have an avatar image', () => {
-    const image = wrapper.find('.avatar');
-    expect(image).toExist();
+  it('ReviewListItem should render', () => {
+    expect(wrapper).toBeDefined();
   });
 
-  it('ReviewListItem should have a username', () => {
-    const user = wrapper.find('.username');
-    expect(user).toExist();
-  });
-
-  it('ReviewListItem should have review', () => {
-    const text = wrapper.find('.reviewText');
-    expect(text).toExist();
-  });
-
-  it('ReviewListItem should have a star rating', () => {
-    const stars = wrapper.find('.reviewStars');
-    expect(stars).toExist();
+  it('ReviewListItem snapshot should match shallow render', () => {
+    expect(wrapper).toMatchSnapshot()
   });
 });

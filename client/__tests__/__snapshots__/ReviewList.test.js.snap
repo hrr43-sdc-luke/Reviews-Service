@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewList ReviewList snapshot should match shallow render 1`] = `
+<div>
+  <div
+    className="reviewListItems"
+  >
+    <ReviewListItem
+      idx={0}
+      key="77"
+      month="February"
+      review={
+        Object {
+          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/anasnakawa/128.jpg",
+          "date": "2020-02-01T08:00:00.000Z",
+          "experience_id": 5,
+          "id": 77,
+          "review": "Commodi atque sit eos sit voluptas sint soluta numquam harum. Sed occaecati perferendis accusantium cum aut placeat ex dolor. Molestiae dolores eum. Omnis impedit illum tempore nihil consequatur rerum aut maiores. Eligendi fuga ut nobis odit porro sit dignissimos laborum. Natus cupiditate et.",
+          "stars": 2,
+          "username": "Bessie",
+        }
+      }
+      stars={2}
+      year="2020"
+    />
+    <ReviewListItem
+      idx={1}
+      key="214"
+      month="January"
+      review={
+        Object {
+          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/alagoon/128.jpg",
+          "date": "2020-01-01T08:00:00.000Z",
+          "experience_id": 5,
+          "id": 214,
+          "review": "Dolorum vero possimus hic sint ut. Ut et perspiciatis voluptate exercitationem tempora laboriosam totam suscipit et. Quia magni saepe eos.",
+          "stars": 4,
+          "username": "Stanley",
+        }
+      }
+      stars={4}
+      year="2020"
+    />
+  </div>
+</div>
+`;

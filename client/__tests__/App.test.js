@@ -7,12 +7,14 @@
 // Enzyme.configure({ adapter: new Adapter() })
 
 // describe("App", () => {
+//   const expId = 5
+//   const wrapper = shallow(<App expId={expId} />)
 
-//   const wrapper = shallow(<App />)
-
-//   it('App should render aggregate star rating', () => {
-//     const rating = wrapper.find('.aggRating');
-//     expect(rating).toExist();
+//   it('App should render', () => {
+//     expect(wrapper).toBeDefined();
 //   });
 
+//   it('App render should match snapshot', () => {
+//     expect(wrapper).toMatchSnapshot()
+//   });
 // })

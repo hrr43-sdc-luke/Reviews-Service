@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageSelector PageSelector snapshot should match shallow render 1`] = `
+<div>
+  <button
+    className="currPage"
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    3
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    8
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;

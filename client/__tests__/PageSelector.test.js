@@ -7,11 +7,16 @@ import PageSelector  from '../components/PageSelector.jsx';
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('PageSelector', () => {
-  const wrapper = shallow( <PageSelector currPage={[]} />);
+  const currPage = 1;
+  const totalPages = 8;
+  const jumpToPage = () => {};
+  const wrapper = shallow( <PageSelector currPage={currPage} totalPages={totalPages} jumpToPage={jumpToPage} />);
 
-  it('ReviewListItem should have a current page number', () => {
-    const page = wrapper.find('.currPage');
-    expect(page).toExist();
+  it('PageSelector should render', () => {
+    expect(wrapper).toBeDefined();
   });
 
+  it('PageSelector snapshot should match shallow render', () => {
+    expect(wrapper).toMatchSnapshot()
+  });
 });
