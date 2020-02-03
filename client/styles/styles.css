@@ -28,12 +28,12 @@
   font-size: 20px;
 }
 
-.rightSide {
+.reviewsRightSide {
   flex: 2 1 380px;
   max-width: 780px;
 }
 
-.nameDateStars {
+.reviewsNameDateStars {
   max-width: 200px;
 }
 
@@ -47,14 +47,14 @@
   padding-left: 40px;
 }
 
-.avatar {
+.reviewAvatar {
   float: left;
   border-radius: 50%;
   height: 30px;
   width: 30px;
 }
 
-.avatar:hover {
+.reviewAvatar:hover {
   cursor: pointer;
 }
 
@@ -69,8 +69,9 @@
   margin: 0px 5px 3px 5px;
 }
 
-.username:hover {
-  cursor: pointer;
+.month {
+  float: left;
+  margin-right: 3px;
 }
 
 .reviewText {
@@ -89,10 +90,9 @@
   font-weight: 600;
 }
 
-.currPage {
-  border-radius: 50%;
-  color: white;
-  background-color: rgb(0, 124, 128);
+.moreButton {
+  border: none;
+  color: rgb(0, 124, 128);
 }
 
 button {
@@ -105,9 +105,8 @@ button:hover {
   text-decoration: underline;
 }
 
-.dots:hover {
-  cursor: default;
-  text-decoration: none;
+button:focus {
+  outline: none;
 }
 
 .line {
@@ -149,6 +148,22 @@ button:hover {
   justify-self: left;
 }
 
-button:focus {
-  outline: none;
+.username:hover {
+  cursor: pointer;
+}
+
+.dots:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+.currPage {
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(0, 124, 128);
+}
+
+.currPage:hover {
+  cursor: default;
+  text-decoration: none;
 }

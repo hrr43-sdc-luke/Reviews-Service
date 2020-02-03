@@ -11,7 +11,7 @@ function GuestReviews({ overallStar }) {
               {overallStar}
             </div>
             <div className="aggStars">
-            &#9734;&#9734;&#9734;&#9734;&#9734;
+              &#9734;&#9734;&#9734;&#9734;&#9734;
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ function GuestReviews({ overallStar }) {
               {overallStar}
             </div>
             <div className="aggStars">
-            &#9733;&#9733;&#9734;&#9734;&#9734;
+              &#9733;&#9733;&#9734;&#9734;&#9734;
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ function GuestReviews({ overallStar }) {
               {overallStar}
             </div>
             <div className="aggStars">
-            &#9733;&#9733;&#9733;&#9733;&#9734;
+              &#9733;&#9733;&#9733;&#9733;&#9734;
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ function GuestReviews({ overallStar }) {
               {overallStar}
             </div>
             <div className="aggStars">
-            &#9733;&#9733;&#9733;&#9733;&#9733;
+              &#9733;&#9733;&#9733;&#9733;&#9733;
             </div>
           </div>
         </div>

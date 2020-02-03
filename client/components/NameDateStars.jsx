@@ -13,7 +13,9 @@ function NameDateStars({
         </p>
         <div className="date">
           <div className="dot">&#183;</div>
-          {month}
+          <div className="month">
+            {month}
+          </div>
           {year}
         </div>
       </div>

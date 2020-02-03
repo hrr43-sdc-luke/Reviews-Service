@@ -135,7 +135,7 @@ function PageSelector({
             className="dots"
             type="button"
           >
-              ...
+            ...
           </button>
           <button
             className="pages"
@@ -304,7 +304,7 @@ function PageSelector({
             className="dots"
             type="button"
           >
-              ...
+            ...
           </button>
           <button
             className="pages"
@@ -501,7 +501,7 @@ function PageSelector({
             className="dots"
             type="button"
           >
-              ...
+            ...
           </button>
           <button
             className="pages"
@@ -726,7 +726,7 @@ function PageSelector({
             className="dots"
             type="button"
           >
-              ...
+            ...
           </button>
           <button
             className="pages"
@@ -816,7 +816,7 @@ function PageSelector({
             className="dots"
             type="button"
           >
-              ...
+            ...
           </button>
           <button
             className="pages"
@@ -869,7 +869,7 @@ function PageSelector({
             className="dots"
             type="button"
           >
-              ...
+            ...
           </button>
           <button
             className="pages"
@@ -930,7 +930,7 @@ function PageSelector({
           className="dots"
           type="button"
         >
-              ...
+          ...
         </button>
         <button
           className="pages"
@@ -976,7 +976,7 @@ function PageSelector({
           className="dots"
           type="button"
         >
-              ...
+          ...
         </button>
         <button
           className="pages"
@@ -1029,7 +1029,7 @@ function PageSelector({
           className="dots"
           type="button"
         >
-              ...
+          ...
         </button>
         <button
           className="pages"
@@ -1089,7 +1089,7 @@ function PageSelector({
           className="dots"
           type="button"
         >
-              ...
+          ...
         </button>
         <button
           className="pages"
@@ -1155,7 +1155,7 @@ function PageSelector({
         className="dots"
         type="button"
       >
-            ...
+        ...
       </button>
       <button
         className="pages"
@@ -1181,7 +1181,7 @@ function PageSelector({
         className="dots"
         type="button"
       >
-            ...
+        ...
       </button>
       <button
         className="pages"

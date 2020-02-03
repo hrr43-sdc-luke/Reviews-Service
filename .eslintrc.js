@@ -6,7 +6,7 @@ module.exports = {
   "jest": true,
   "commonjs": true
   },
-  "ignorePatterns": ["public/bundle.js", "node_modules"],
+  // "ignorePatterns": ["public/bundle.js", "node_modules"],
   "rules": {
   "no-console": "off",
   "import/extensions": "off"

@@ -6,11 +6,11 @@ exports[`ReviewListItem ReviewListItem snapshot should match shallow render 1`] 
 >
   <img
     alt="Smiley face"
-    className="avatar"
+    className="reviewAvatar"
     src="https://s3.amazonaws.com/uifaces/faces/twitter/a1chapone/128.jpg"
   />
   <div
-    className="nameDateStars"
+    className="reviewsNameDateStars"
   >
     <NameDateStars
       month="February"

@@ -4,7 +4,7 @@ const apiCalls = require('../apiCalls.js');
 
 
 describe('getReviews API', () => {
-  // it('getReviews with an experiece id of 5 should return a array with an object.experience_id of 5', (done) => {
+  // it('getReviews with expId of 5 should return a array with an object.expId of 5', (done) => {
 
   // });
 });
