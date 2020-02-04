@@ -1,8 +1,8 @@
 const app = require('./app.js');
 
-const port = process.env.PORT || 3007;
-
 app.engine('html', require('ejs').renderFile);
+
+const port = process.env.PORT || 3007;
 
 app.get('/:id', (req, res) => {
   res.render('../public/index.html');

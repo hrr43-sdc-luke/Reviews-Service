@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-// add logice to show the "line" for key 0-3, but not 4
-
 function ReviewListItemText({ text, idx }) {
   const [showMore, setShowMore] = useState(false);
   if (idx === 4) {
