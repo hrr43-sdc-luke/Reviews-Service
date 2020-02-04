@@ -6,4 +6,4 @@ import './styles/styles.css';
 const URL = window.location.href.split('/');
 const expId = URL[URL.length - 1];
 
-ReactDOM.render(<App expId={expId} />, document.getElementById('app'));
+ReactDOM.render(<App expId={expId} />, document.getElementById('reviewsSection'));
