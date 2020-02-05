@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NameDateStars NameDateStars snapshot should match shallow render 1`] = `
+<div>
+  <div
+    className="nameDate"
+  >
+    <p
+      className="username"
+    >
+      Bob
+    </p>
+    <div
+      className="date"
+    >
+      <div
+        className="dot"
+      >
+        ·
+      </div>
+      <div
+        className="month"
+      >
+        February
+      </div>
+      2020
+    </div>
+  </div>
+  <div
+    className="reviewStars"
+  >
+    <ReviewStars
+      stars={4}
+    />
+  </div>
+</div>
+`;

@@ -9,11 +9,11 @@ function ReviewListItem({
   return (
     <div className="ReviewListItem">
       <img
-        className="avatar"
+        className="reviewAvatar"
         src={review.avatar}
         alt="Smiley face"
       />
-      <div className="nameDateStars">
+      <div className="reviewsNameDateStars">
         <NameDateStars username={review.username} stars={stars} year={year} month={month} />
       </div>
       <ReviewListItemText text={review.review} idx={idx} />

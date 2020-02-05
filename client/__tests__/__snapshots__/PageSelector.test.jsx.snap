@@ -1,0 +1,666 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageSelector PageSelector snapshot should match shallow render with 1 page of reviews 1`] = `""`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 1 and 8 total pages 1`] = `
+<div>
+  <button
+    className="currPage"
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    3
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    8
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 2 and 3 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    3
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 2 and 5 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    3
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    5
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 3 and 4 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    3
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    4
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 3 and 8 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    3
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    4
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    8
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 4 and 5 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    3
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    4
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    5
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 4 and 8 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    3
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    4
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    5
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    8
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 5 and 6 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    4
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    5
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    6
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 5 and 8 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    4
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    5
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    6
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    7
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    8
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 30 and 120 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    29
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    30
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    31
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    120
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 201 and 202 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    200
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    201
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    202
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with current page of 453 and 456 total pages 1`] = `
+<div>
+  <button
+    className="previous"
+    onClick={[Function]}
+    type="button"
+  >
+    &lt;
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="dots"
+    type="button"
+  >
+    ...
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    452
+  </button>
+  <button
+    className="currPage"
+    type="button"
+  >
+    453
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    454
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    455
+  </button>
+  <button
+    className="pages"
+    onClick={[Function]}
+    type="button"
+  >
+    456
+  </button>
+  <button
+    className="next"
+    onClick={[Function]}
+    type="button"
+  >
+    &gt;
+  </button>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with no pages of reviews 1`] = `""`;

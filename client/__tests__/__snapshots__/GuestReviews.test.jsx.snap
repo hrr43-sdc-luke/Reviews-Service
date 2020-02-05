@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GuestReviews GuestReviews render of 2 stars shoud mach the snapshot 1`] = `
+<div
+  className="guestReviews"
+>
+  <div
+    className="aggRating"
+  >
+    <h2>
+      Guest reviews
+    </h2>
+    <div
+      className="starsNum"
+    >
+      <div
+        className="aggNum"
+      >
+        2
+      </div>
+      <div
+        className="aggStars"
+      >
+        ★★☆☆☆
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`GuestReviews GuestReviews render of 3 stars shoud mach the snapshot 1`] = `
+<div
+  className="guestReviews"
+>
+  <div
+    className="aggRating"
+  >
+    <h2>
+      Guest reviews
+    </h2>
+    <div
+      className="starsNum"
+    >
+      <div
+        className="aggNum"
+      >
+        3
+      </div>
+      <div
+        className="aggStars"
+      >
+        ★★★☆☆
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`GuestReviews GuestReviews render of 4 stars shoud mach the snapshot 1`] = `
+<div
+  className="guestReviews"
+>
+  <div
+    className="aggRating"
+  >
+    <h2>
+      Guest reviews
+    </h2>
+    <div
+      className="starsNum"
+    >
+      <div
+        className="aggNum"
+      >
+        4
+      </div>
+      <div
+        className="aggStars"
+      >
+        ★★★★☆
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`GuestReviews GuestReviews render of 5 stars shoud mach the snapshot 1`] = `
+<div
+  className="guestReviews"
+>
+  <div
+    className="aggRating"
+  >
+    <h2>
+      Guest reviews
+    </h2>
+    <div
+      className="starsNum"
+    >
+      <div
+        className="aggNum"
+      >
+        5
+      </div>
+      <div
+        className="aggStars"
+      >
+        ★★★★★
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -58,11 +58,11 @@ class App extends React.Component {
       <div>
         <div className="reviewsModule">
           <GuestReviews overallStar={overallStar} />
-          <div className="rightSide">
+          <div className="reviewsRightSide">
             <div>
               <ReviewList reviews={reviews} />
             </div>
-            <div className="pageSelector">
+            <div className="reviewsPageSelector">
               <PageSelector
                 currPage={currPage}
                 totalPages={totalPages}

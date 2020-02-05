@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewListItem ReviewListItem snapshot should match shallow render 1`] = `
+<div
+  className="ReviewListItem"
+>
+  <img
+    alt="Smiley face"
+    className="reviewAvatar"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/a1chapone/128.jpg"
+  />
+  <div
+    className="reviewsNameDateStars"
+  >
+    <NameDateStars
+      month="February"
+      stars={5}
+      username="Bob"
+      year="2020"
+    />
+  </div>
+  <ReviewListItemText
+    idx={0}
+    text="Ut nemo consectetur commodi quia saepe earum. Cupiditate culpa rerum et omnis ipsam tempore aut. Sequi nulla sunt id excepturi aliquid consequatur dolor."
+  />
+</div>
+`;
