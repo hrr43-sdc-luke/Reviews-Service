@@ -1,8 +1,6 @@
-const mysql = require('mysql');
-const mysqlConfig = require('../config.js');
+// const mysql = require('mysql');
 const fakerData = require('./fakerData.js');
-
-const connection = mysql.createConnection(mysqlConfig);
+const db = require('../index.js');
 
 const sampleData = fakerData.createFakeData();
 
@@ -11,7 +9,7 @@ const seedDB = () => {
     const query = 'insert into reviews(experience_id, username, avatar, date, stars, review) values(?, ?, ?, ?, ?, ?)';
     const values = [sampleData[i].experience_id, sampleData[i].username,
       sampleData[i].avatar, sampleData[i].date, sampleData[i].stars, sampleData[i].review];
-    connection.query(query, values, (err, response) => {
+    db.connection.query(query, values, (err, response) => {
       if (err) {
         console.log(err);
       } else {
