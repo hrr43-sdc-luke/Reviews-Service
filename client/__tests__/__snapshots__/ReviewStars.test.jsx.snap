@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageSelector PageSelector snapshot should match shallow render with 1 star 1`] = `
+<div>
+  <p>
+    ⭑⭒⭒⭒⭒
+  </p>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with 2 stars 1`] = `
+<div>
+  <p>
+    ⭑⭑⭒⭒⭒
+  </p>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with 3 stars 1`] = `
+<div>
+  <p>
+    ⭑⭑⭑⭒⭒
+  </p>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with 4 stars 1`] = `
+<div>
+  <p>
+    ⭑⭑⭑⭑⭒
+  </p>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with 5 stars 1`] = `
+<div>
+  <p>
+    ⭑⭑⭑⭑⭑
+  </p>
+</div>
+`;
+
+exports[`PageSelector PageSelector snapshot should match shallow render with no stars 1`] = `
+<div>
+  <p>
+    ⭒⭒⭒⭒⭒
+  </p>
+</div>
+`;
