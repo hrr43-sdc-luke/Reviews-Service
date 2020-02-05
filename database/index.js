@@ -1,10 +1,8 @@
 const mysql = require('mysql');
 
-const localMysqlConfig = require('./config.js');
-
-const hostURL = process.env.DB_URL || localMysqlConfig.host;
-const username = process.env.DB_User || localMysqlConfig.user;
-const pw = process.env.DB_PW || localMysqlConfig.password;
+const hostURL = process.env.DB_URL || 'localhost';
+const username = process.env.DB_User || 'root';
+const pw = process.env.DB_PW || '';
 
 const mysqlConfig = {
   host: hostURL,
