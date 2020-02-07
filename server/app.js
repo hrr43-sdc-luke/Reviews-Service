@@ -7,7 +7,7 @@ const db = require('../database/index.js');
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:4000',
+  origin: 'http://18.222.165.232/:4000',
   optionsSuccessStatus: 200,
 }));
 app.use(express.static('./public'));
