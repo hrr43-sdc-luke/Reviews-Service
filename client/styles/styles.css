@@ -5,12 +5,15 @@
   flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
+  margin-bottom: 75px;
 }
 
 .guestReviews {
   flex: 1 1 150px;
   max-width: 330px;
+  margin-left: 50px;
   color: rgba(80, 79, 79, 0.993);
+  z-index: -1;
 }
 
 .aggRating {
@@ -118,7 +121,7 @@ button:focus {
 
 .line {
   width: auto;
-  border-bottom: 1px solid darkgray;
+  border-bottom: 1px solid lightgray;
   padding-bottom: 10px;
 }
 
