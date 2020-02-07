@@ -105,7 +105,7 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n\n\nconst getReviews = (id, callback) => {\n  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`http://18.222.165.232/reviews/${id}`)\n    .then((reviews) => {\n      callback(null, reviews.data);\n    })\n    .catch((err) => {\n      callback(err);\n    });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getReviews);\n\n\n//# sourceURL=webpack:///./client/apiCalls.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n\n\nconst getReviews = (id, callback) => {\n  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(`http://18.222.165.232:3007/reviews/${id}`)\n    .then((reviews) => {\n      callback(null, reviews.data);\n    })\n    .catch((err) => {\n      callback(err);\n    });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getReviews);\n\n\n//# sourceURL=webpack:///./client/apiCalls.js?");
 
 /***/ }),
 
