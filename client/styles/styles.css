@@ -6,12 +6,12 @@
   max-width: 1200px;
   margin: auto;
   margin-bottom: 75px;
+  padding: 50px;
 }
 
 .guestReviews {
   flex: 1 1 150px;
   max-width: 330px;
-  margin-left: 50px;
   color: rgba(80, 79, 79, 0.993);
   z-index: -1;
 }
@@ -35,7 +35,6 @@
 .reviewsRightSide {
   flex: 2 1 380px;
   max-width: 780px;
-  margin-left: 50px;
 }
 
 .reviewsNameDateStars {
