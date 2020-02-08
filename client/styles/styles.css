@@ -35,6 +35,7 @@
 .reviewsRightSide {
   flex: 2 1 380px;
   max-width: 780px;
+  margin-left: 50px;
 }
 
 .reviewsNameDateStars {
