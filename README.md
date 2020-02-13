@@ -2,10 +2,14 @@
 
 Created by: [`Philip Nguyen`](https://www.linkedin.com/in/philip-nguyen-333963196/)
 
-## Build CRUD api for service
+## Getting started
+
+To set up the repo go [here](REVIEWS-SERVICE.md).
+
+## CRUD api for service
 
 * Create / `POST` - create a new review
-* Read / `GET` - read  reviews
+* Read / `GET` - read reviews
 * Update / `PUT` - update a review
 * Delete / `DELETE` - delete a review
 
