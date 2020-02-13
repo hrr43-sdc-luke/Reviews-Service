@@ -26,12 +26,42 @@ app.get('/:id', (req, res) => {
   res.render('../public/index.html');
 });
 
-app.get('/reviews/:id', cors(corsOptions), (req, res) => {
+app.post('/reviews/', cors(corsOptions), (req, res) => {
+  db.createExpReviews(req.body, (err, reviewId) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(201).send(reviewId);
+    }
+  });
+});
+
+app.get('/reviews/:id', (req, res) => {
   db.getExpReviews(req.params.id, (err, reviews) => {
     if (err) {
       res.status(400).send(err);
     } else {
       res.status(200).send(reviews);
+    }
+  });
+});
+
+app.put('/reviews/:id', cors(corsOptions), (req, res) => {
+  db.updateExpReviews(req.params.id, req.body, (err, reviews) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(200).send(reviews);
+    }
+  });
+});
+
+app.delete('/reviews/:id', cors(corsOptions), (req, res) => {
+  db.deleteExpReviews(req.params.id, (err) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(200);
     }
   });
 });

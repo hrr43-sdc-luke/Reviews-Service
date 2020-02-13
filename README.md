@@ -1,26 +1,12 @@
-# Reviews
+# Hrr-43-SDC Reviews-service
 
-To setup and use this repo, please follow these steps:
+Created by: [`Philip Nguyen`](https://www.linkedin.com/in/philip-nguyen-333963196/)
 
-For Development:
+## Build CRUD api for service
 
-1) npm install
-2) Have MySQL5.7 installed and started
-3) from your terminal in the root folder of the repo, run mysql -u root (or whatever credentials you use for mysql) < './database/schema.sql' (this will load the schema)
-4) npm run seed (will seed the MySQL db with sample data)
-5) npm run build (to start webpack bundling)
-6) npm run start-dev (starts the server)
+* Create / `POST` - create a new review
+* Read / `GET` - read  reviews
+* Update / `PUT` - update a review
+* Delete / `DELETE` - delete a review
 
-For your Proxy Server:
-
-1) npm install
-2) Have MySQL5.7 installed and started
-3) from your terminal in the root folder of the repo, run mysql -u root (or whatever credentials you use for mysql) < './database/schema.sql'  (this will load the schema)
-4) npm run seed (will seed the MySQL db with sample data)
-5) npm start (starts the server)
-
-  Please be sure to have the following in your index.html:
-
-    a) This div in your body:  <div id="reviewsSection"></div>
-    b) This script in your html body: <script src="http://localhost:3007/bundle.js"></script>
-
+check out the api routes [here](server/app.js#L29)
