@@ -8,9 +8,21 @@ To set up the repo go [here](REVIEWS-SERVICE.md).
 
 ## CRUD api for service
 
-* Create / `POST` - create a new review
-* Read / `GET` - read reviews
-* Update / `PUT` - update a review
-* Delete / `DELETE` - delete a review
+* [`POST`](server/app.js#L17) - Create a new review, using the experience id
+* [`GET`](server/app.js#L27) - Read reviews, using the experience id
+* [`PUT`](server/app.js#L37) - Update a review, using the review id
+* [`DELETE`](server/app.js#L47) - Delete a review, using the review id
 
-check out the api routes [here](server/app.js#L29)
+## Environment Variables
+
+#### Postgres
+
+* `PGUSER` - postgres
+* `PGHOST` - localhost
+* `PGPASSWORD` - (your postgres password)
+* `PGDATABASE` - postgres
+* `PGPORT` - 5432
+
+#### Insert schema into postgres
+
+ `psql -h localhost -U postgres -f database/postgres_schema.sql`
