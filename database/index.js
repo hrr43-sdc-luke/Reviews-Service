@@ -23,7 +23,8 @@ const dbConnection = mysql.createConnection(mysqlConfig);
 
 const getAllExpReviews = (expId, callback) => {
   const query = 'select * from reviews where experience_id = ?';
-  dbConnection.query(query, expId, (err, response) => {
+  const experienceId = expId;
+  dbConnection.query(query, experienceId, (err, response) => {
     if (err) {
       callback(err);
     } else {
@@ -32,11 +33,9 @@ const getAllExpReviews = (expId, callback) => {
   });
 };
 
-const createExpReviews = (expId, reviewsData, callback) => {
-  const reviews = { ...reviewsData };
-  reviews.experience_id = expId;
+const createExpReview = (newReviews, callback) => {
   const query = 'INSERT INTO reviews SET ?';
-  dbConnection.query(query, reviews, (err, response) => {
+  dbConnection.query(query, newReviews, (err, response) => {
     if (err) {
       callback(err);
     } else {
@@ -45,11 +44,20 @@ const createExpReviews = (expId, reviewsData, callback) => {
   });
 };
 
-const updateExpReviews = (reviewId, updateData, callback) => {
-  const reviews = { ...updateData };
+const getExpReview = (reviewId, callback) => {
+  const query = 'SELECT * FROM reviews WHERE id = ?';
+  dbConnection.query(query, reviewId, (err, response) => {
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, response);
+    }
+  });
+};
+const updateExpReview = (reviewId, updateData, callback) => {
   const updateQuery = `UPDATE reviews SET ? WHERE id=${reviewId}`;
   const selectReviewQuery = `SELECT * FROM reviews WHERE id=${reviewId}`;
-  dbConnection.query(updateQuery, reviews, (updateErr) => {
+  dbConnection.query(updateQuery, updateData, (updateErr) => {
     if (updateErr) {
       callback(updateErr);
     } else {
@@ -64,8 +72,8 @@ const updateExpReviews = (reviewId, updateData, callback) => {
   });
 };
 
-const deleteExpReviews = (reviewId, callback) => {
-  const query = `DELETE FROM reviews WHERE id=${reviewId}`
+const deleteExpReview = (reviewId, callback) => {
+  const query = `DELETE FROM reviews WHERE id=${reviewId}`;
   dbConnection.query(query, (err, response) => {
     if (err) {
       callback(err);
@@ -78,7 +86,8 @@ const deleteExpReviews = (reviewId, callback) => {
 module.exports = {
   connection: dbConnection,
   getExpReviews: getAllExpReviews,
-  createExpReviews,
-  updateExpReviews,
-  deleteExpReviews,
+  createExpReview,
+  getExpReview,
+  updateExpReview,
+  deleteExpReview,
 };

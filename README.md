@@ -6,12 +6,12 @@ Created by: [`Philip Nguyen`](https://www.linkedin.com/in/philip-nguyen-33396319
 
 To set up the repo go [here](REVIEWS-SERVICE.md).
 
-## CRUD api for service
+## CRUD api for review service
 
-* [`POST`](server/app.js#L17) - Create a new review, using the experience id
-* [`GET`](server/app.js#L27) - Read reviews, using the experience id
-* [`PUT`](server/app.js#L37) - Update a review, using the review id
-* [`DELETE`](server/app.js#L47) - Delete a review, using the review id
+* [`POST`](server/app.js#L27) - Create a new review
+* [`GET`](server/app.js#L37) - Read a review
+* [`PUT`](server/app.js#L47) - Update a review
+* [`DELETE`](server/app.js#L57) - Delete a review
 
 ## Environment Variables
 
