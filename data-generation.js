@@ -1,43 +1,41 @@
-const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const faker = require('faker');
+const fs = require('fs');
+const hrtime = require('process.hrtime');
 
-const noPrimaryRecords = 10; // goal is to get 10mil experience records
+const timer = hrtime();
+
+const writeUsers = fs.createWriteStream('database/lrg-data.csv');
+writeUsers.write('id,experience_id,username,avatar,date,stars,review\n', 'utf8');
+
+const noPrimaryRecords = 10000000; // goal is to get 10mil experience records
 const noReviewsPerPrimeRecords = 10;
+const totalRecords = noPrimaryRecords * noReviewsPerPrimeRecords;
 let reviewId = 0;
 
-const csvWriter = createCsvWriter({
-  path: 'database/tenItems.csv',
-  header: [
-    { id: 'id', title: 'id' },
-    { id: 'experience_id', title: 'experience_id' },
-    { id: 'username', title: 'username' },
-    { id: 'avatar', title: 'avatar' },
-    { id: 'date', title: 'date' },
-    { id: 'stars', title: 'stars' },
-    { id: 'review', title: 'review' },
-  ],
-});
-
-const records = [];
-for (let i = 0; i < noPrimaryRecords; i += 1) {
-  for (let j = 0; j < noReviewsPerPrimeRecords; j += 1) {
-    reviewId += 1;
-    const date = faker.date.recent(90);
-    const strDate = JSON.stringify(date).split('T')[0].slice(1);
-    const reviewData = {
-      id: reviewId,
-      experience_id: i + 1,
-      username: faker.internet.userName(),
-      avatar: faker.image.avatar(),
-      date: strDate,
-      stars: faker.random.number({ min: 0, max: 5 }),
-      review: faker.lorem.paragraph(),
-    };
-    records.push(reviewData);
+function writeTenMillionUsers(writer, encoding, callback) {
+  function write() {
+    let ok = true;
+    for (let i = reviewId; i < totalRecords && ok; i += 1) {
+      reviewId += 1;
+      const experienceId = Math.floor(Math.random() * noPrimaryRecords);
+      const starMinMax = { min: 0, max: 5 };
+      const date = faker.date.recent(90);
+      const strDate = JSON.stringify(date).split('T')[0].slice(1);
+      const reviewData = `${reviewId},${experienceId},${faker.internet.userName()},${faker.image.avatar()},${strDate},${faker.random.number(starMinMax)},${faker.lorem.paragraph()}\n`;
+      if (i === totalRecords - 1) {
+        writer.write(reviewData, encoding, callback);
+      } else {
+        ok = writer.write(reviewData, encoding);
+      }
+    }
+    if (reviewId < totalRecords) {
+      writer.once('drain', write);
+    }
   }
+  write();
 }
 
-csvWriter.writeRecords(records)
-  .then(() => {
-    console.log('...Done');
-  });
+writeTenMillionUsers(writeUsers, 'utf-8', () => {
+  writeUsers.end();
+  console.log(`CSV file created. It took ${hrtime(timer, 's')}seconds to complete`);
+});
