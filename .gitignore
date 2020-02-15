@@ -29,4 +29,4 @@ public/reviews-bundle.js
 package-lock.json
 .env
 generateData/*.csv
-generateData/MOCK_DATA.json
+generateData/MOCK-DATA.json
