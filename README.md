@@ -8,16 +8,16 @@ To set up the repo go [here](REVIEWS-SERVICE.md).
 
 ## CRUD api for review service
 
-* [`POST`](server/app.js#L27) - Create a new review
-* [`GET`](server/app.js#L37) - Read a review
-* [`PUT`](server/app.js#L47) - Update a review
-* [`DELETE`](server/app.js#L57) - Delete a review
+* [`POST`](server/app.js#L27-#35) - Create a new review
+* [`GET`](server/app.js#L37-#45) - Read a review
+* [`PUT`](server/app.js#L47-#55) - Update a review
+* [`DELETE`](server/app.js#L57-#65) - Delete a review
 
 ## Generate Data
 
 * First you will need to set up with a `MOCK-DATA.json` file. This should be an array of objects and each object should have these three keys, with fake data value: `userName`,`review`, and `date (yyyy-mm-dd)`
-* The avatar url is fetched via faker. However you can include an `avatar` key with an img url to the MOCK-DATA.json file. If you choose this option then you will need to take out this [line](generateData/index.js#L26), which is the avatar variable. Instead you will add the avatar in the object destructuring [here](generateData/index.js#L23-25).
-* You can edit the amount of records you want to create [here](generateData/index.js#L11-12), you can also name your csv data file [here](generateData/index.js#L7). Once satisfied you can run the data generator with `node generateData/`
+* The avatar url is fetched via faker. However you can include an `avatar` key with an img url to the MOCK-DATA.json file. If you choose this option then you will need to take out this [line](generateData/index.js#L27), which is the avatar variable. Instead you will add the avatar in the object destructuring [here](generateData/index.js#L24-26).
+* You can edit the amount of records you want to create [here](generateData/index.js#L13-14), you can also name your csv data file [here](generateData/index.js#L6). Once satisfied you can run the data generator with `node generateData/`
 
 ## Databases (environment variables/schema)
 
