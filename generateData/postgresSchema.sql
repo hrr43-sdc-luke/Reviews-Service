@@ -1,4 +1,3 @@
--- Error when I use 'IF NOT EXISTS' in CREATE DATABASE. So I dropped it first before creating a db
 DROP DATABASE IF EXISTS airbnb;
 CREATE DATABASE airbnb;
 
@@ -13,4 +12,4 @@ CREATE TABLE reviews (
   review VARCHAR (400) NOT NULL
 );
 
-\COPY reviews(id,experience_id,username,review,date,stars,avatar) FROM '/Users/steelyphil/Desktop/hackReactor/Reviews-Service/generateData/data.csv' DELIMITER ',' CSV HEADER;
+-- \COPY reviews(id,experience_id,username,review,date,stars,avatar) FROM 'PATH_TO_CSV' DELIMITER ',' CSV HEADER;
