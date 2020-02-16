@@ -19,11 +19,4 @@ const timer = hrtime();
 client.connect();
 client.on('connect', () => {
   console.log('Postgres is connected');
-  client.query('SELECT * FROM reviews;', (err, result) => {
-    if (err) {
-      console.error(err)
-    } else {
-      console.log(result)
-    }
-  })
 });
