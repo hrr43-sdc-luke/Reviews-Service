@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
-const pgdb = require('../generateData/postgresSeed.js');
 const db = require('../database/index.js');
 
 const app = express();
