@@ -31,6 +31,8 @@ To set up the repo go [here](REVIEWS-SERVICE.md).
 * `PGDATABASE` - postgres
 * `PGPORT` - 5432
 
-#### Insert schema (be sure to have postgres service running)
+#### Insert schema/seed command
 
-`psql -h localhost -U postgres -f database/postgres_schema.sql`
+`psql -h localhost -U postgres -d airbnb -f generateData/postgresSchema.sql`
+
+* To test for the amount of time it takes to seed your data, add `time` to the beginning of the insert command. You should get three outputs; user - the amount of CPU time spent in user mode, system (sys) - amount of CPU time spent in kernel mode, and total (real, elapsed) - the time from start to finish of the call
