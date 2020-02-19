@@ -11,5 +11,3 @@ CREATE TABLE reviews (
   stars INT NOT NULL,
   review VARCHAR (400) NOT NULL
 );
-
--- \COPY reviews(id,experience_id,username,review,date,stars,avatar) FROM 'PATH_TO_CSV' DELIMITER ',' CSV HEADER;

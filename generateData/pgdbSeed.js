@@ -24,7 +24,7 @@ const client = new Client({
 });
 client.connect();
 client.on('connect', () => {
-  console.log('Connected to postgres. Please wait a moment while your recorded are being copied...');
+  console.log('Connected to postgres. Please wait a moment while your records are being copied...');
   timer = hrtime();
 });
 const stream = client.query(copyFrom('COPY reviews(id,experience_id,username,review,date,stars,avatar) FROM STDIN CSV HEADER;'));
