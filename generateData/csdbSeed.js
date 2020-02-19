@@ -40,11 +40,8 @@ fs.createReadStream(filePath)
       if (err) {
         console.error(err);
       }
-    })
+    });
   })
   .on('end', () => {
     console.log('Read finish', hrtime(timer, 's'));
   });
-
-
-// COPY reviews(id,experience_id,username,review,date,stars,avatar) FROM 'generateData/data.csv' WITH DELIMITER=',' AND HEADER = TRUE;
