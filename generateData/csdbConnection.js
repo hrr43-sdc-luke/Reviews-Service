@@ -11,10 +11,6 @@ const client = new cassandra.Client({
       [distance.local]: 2,
       [distance.remote]: 1,
     },
-    maxConnectionsPerHost: {
-      [distance.local]: 32768,
-      [distance.remote]: 2000,
-    },
   },
   localDataCenter: process.env.CSDATACENTER,
   keyspace: process.env.CSKEYSPACE,

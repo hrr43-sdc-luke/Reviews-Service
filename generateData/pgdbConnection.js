@@ -1,4 +1,5 @@
-const { Client } = require('pg');
+const { Pool } = require('pg');
+// const pgp = require('pg-promise')();
 require('dotenv').config();
 
 const user = process.env.PGUSER;
@@ -9,9 +10,11 @@ const port = process.env.PGPORT;
 const connectionString = `postgres://${user}:${password}@${host}:${port}/${database}`;
 
 
-const client = new Client({
+const client = new Pool({
   connectionString,
 });
+
+// const pgdb = pgp(connectionString);
 
 
 module.exports = client;

@@ -14,11 +14,9 @@ const timer = hrtime();
 
 const query = 'INSERT INTO airbnb.reviews(id,experience_id,username,review,date,stars,avatar) VALUES (?, ?, ?, ?, ?, ?, ?);';
 
-let idx = 0
 fs.createReadStream(filePath)
   .pipe(csv.parse({ headers: true }))
   .on('data', (data) => {
-    idx += 1;
     const {
       id, experience_id, username, review, date, stars, avatar,
     } = data;
