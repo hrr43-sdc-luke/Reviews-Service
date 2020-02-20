@@ -1,41 +1,28 @@
-const cassandra = require('cassandra-driver');
-
-const { distance } = cassandra.types;
 const fs = require('fs');
 const path = require('path');
 const csv = require('fast-csv');
 const hrtime = require('process.hrtime');
 
-require('dotenv').config();
-
-const dataFileName = 'data';
+const dataFileName = 'small-data';
 const csvFile = `${dataFileName}.csv`;
 const dirPath = path.resolve(__dirname);
 const filePath = path.join(dirPath, csvFile);
 
-const client = new cassandra.Client({
-  contactPoints: [process.env.CSCONTACTPOINT],
-  pooling: {
-    coreConnectionsPerHost: {
-      [distance.local]: 2,
-      [distance.remote]: 1,
-    },
-  },
-  localDataCenter: process.env.CSDATACENTER,
-  keyspace: process.env.CSKEYSPACE,
-});
+const client = require('./csdbConnection.js');
 
 const timer = hrtime();
 
 const query = 'INSERT INTO airbnb.reviews(id,experience_id,username,review,date,stars,avatar) VALUES (?, ?, ?, ?, ?, ?, ?);';
 
+let idx = 0
 fs.createReadStream(filePath)
   .pipe(csv.parse({ headers: true }))
   .on('data', (data) => {
+    idx += 1;
     const {
-      id, experience_id, username, review, date, stars, avatar
+      id, experience_id, username, review, date, stars, avatar,
     } = data;
-    const values = [id, experience_id, username, review, date, stars, avatar]
+    const values = [id, experience_id, username, review, date, stars, avatar];
     client.execute(query, values, { prepare: true }, (err) => {
       if (err) {
         console.error(err);
@@ -43,5 +30,5 @@ fs.createReadStream(filePath)
     });
   })
   .on('end', () => {
-    console.log('Read finish', hrtime(timer, 's'));
+    console.log(`Success! ${csvFile} was copied into cassandra in ${hrtime(timer, 's')}seconds`);
   });
