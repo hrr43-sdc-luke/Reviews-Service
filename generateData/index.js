@@ -5,12 +5,12 @@ const hrtime = require('process.hrtime');
 const timer = hrtime();
 const mockData = require('./MOCK-DATA.json');
 
-const dataFileName = 'data';
+const dataFileName = 'small-data';
 
 const writeUsers = fs.createWriteStream(`generateData/${dataFileName}.csv`);
-writeUsers.write('id,experience_id,username,avatar,date,stars,review\n', 'utf8');
+writeUsers.write('id,experience_id,username,review,date,stars,avatar\n', 'utf8');
 
-const noPrimaryRecords = 10000000; // goal is to get 10mil experience records
+const noPrimaryRecords = 10; // goal is to get 10mil experience records
 const noReviewsPerPrimeRecords = 10;
 const totalRecords = noPrimaryRecords * noReviewsPerPrimeRecords;
 let reviewId = 0;
@@ -27,7 +27,7 @@ function writeTenMillionUsers(writer, encoding, callback) {
       const avatar = faker.image.avatar()
       const experienceId = Math.floor(Math.random() * noPrimaryRecords) + 1;
       const starNo = Math.floor(Math.random() * (5 - 0 + 1));
-      const reviewData = `${reviewId},${experienceId},${userName},${avatar},${date},${starNo},${review}\n`;
+      const reviewData = `${reviewId},${experienceId},${userName},${review},${date},${starNo},${avatar}\n`;
       if (i === totalRecords - 1) {
         writer.write(reviewData, encoding, callback);
       } else {

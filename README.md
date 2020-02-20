@@ -21,16 +21,51 @@ To set up the repo go [here](REVIEWS-SERVICE.md).
 
 ## Databases (environment variables/schema)
 
-### Postgres
+### PostgreSQL
 
 #### Environment variables
 
 * `PGUSER` - postgres
 * `PGHOST` - localhost
 * `PGPASSWORD` - (your postgres password)
-* `PGDATABASE` - postgres
+* `PGDATABASE` - airbnb
 * `PGPORT` - 5432
 
-#### Insert schema (be sure to have postgres service running)
+#### Insert schema
 
-`psql -h localhost -U postgres -f database/postgres_schema.sql`
+`psql -h localhost -U postgres -d airbnb -f generateData/pgdbSchema.sql`
+
+#### Seed data
+
+`node generateData/pgdbSeed.js`
+
+alternatively (pgdb seed command)
+
+`\COPY reviews(id,experience_id,username,review,date,stars,avatar) FROM 'generateData/data.csv' DELIMITER ',' CSV HEADER;`
+
+### Apache Cassandra
+
+#### Environment variables
+
+<!-- needed for seeding data -->
+* `CSCONTACTPOINT` - localhost
+* `CSDATACENTER` - datacenter1
+* `CSKEYSPACE` - airbnb
+<!-- needed for schema command -->
+* `CSUSER` - cassandra
+* `CSPASSWORD` - cassandra
+* `CSPORT` - 9042
+
+#### Insert schema
+
+`cqlsh {CSCONTACTPOINT} -u {CSUSER} -p {CSPASSWORD} -k {CSKEYSPACE} -e "SOURCE 'generateData/csdbSchema.cql'"`
+
+#### Seed data
+
+`node generateData/csdbSeed.js`
+
+alternatively (csdb seed command)
+
+`COPY reviews(id,experience_id,username,review,date,stars,avatar) FROM 'generateData/data.csv' WITH DELIMITER=',' AND HEADER = TRUE;`
+
+
