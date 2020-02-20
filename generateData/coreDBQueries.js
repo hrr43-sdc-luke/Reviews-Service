@@ -6,45 +6,45 @@ const csdb = require('./csdbConnection.js');
 
 // pick a database to test (between 'postgres' and 'cassandra')
 const selectedDataBase = 'cassandra';
-const noOfQueries = 1;
+const noOfQueries = 1000;
 
 const getReviews = async (db) => {
   const logTime = (timer) => {
-    console.log(`${noOfQueries} ${selectedDataBase} query took ${hrtime(timer, 's')}seconds`);
+    console.log(`${noOfQueries} ${selectedDataBase} query; about ${hrtime(timer, 's').toFixed(5)}s per query`);
   };
 
   if (db === 'postgres') {
-    pgdb.connect((err, client, done) => {
-      let timer = hrtime();
+    pgdb.connect((err, client) => {
+      let timer;
       if (err) throw err;
       const query = new QueryStream('SELECT * FROM reviews WHERE id>0 AND id<=($1)', [noOfQueries]);
       client.query(query)
         .on('end', () => {
-          done();
+          client.end();
           logTime(timer);
         })
         // .pipe(JSONStream.stringify());
-        // .on('data', (data) => {
+        .on('data', (data) => {
           // console.log(data)
           // start timer when data received
-          // timer = hrtime();
-        // })
+          timer = hrtime();
+        })
     });
   }
 
   if (db === 'cassandra') {
     const query = 'SELECT * FROM reviews LIMIT ?';
-    let timer = hrtime();
+    let timer;
     csdb.stream(query, [noOfQueries], { prepare: true })
       // .pipe(JSONStream.stringify())
-      // .on('data', (data) => {
-      //   console.log(data)
+      .on('data', (data) => {
+        // console.log(data)
         // start timer when data received
-      //     timer = hrtime();
-      // })
+        timer = hrtime();
+      })
       .on('end', () => {
-        csdb.shutdown();
         logTime(timer);
+        csdb.shutdown();
       });
   }
 };
