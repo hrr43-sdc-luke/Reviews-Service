@@ -39,7 +39,7 @@ To set up the repo go [here](REVIEWS-SERVICE.md).
 
 `node generateData/pgdbSeed.js`
 
-alternatively (pgdb seed command)
+alternatively (pgdb COPY FROM command)
 
 `\COPY reviews(id,experience_id,username,review,date,stars,avatar) FROM 'generateData/data.csv' DELIMITER ',' CSV HEADER;`
 
@@ -64,8 +64,16 @@ alternatively (pgdb seed command)
 
 `node generateData/csdbSeed.js`
 
-alternatively (csdb seed command)
+alternatively (csdb COPY FROM command)
 
 `COPY reviews(id,experience_id,username,review,date,stars,avatar) FROM 'generateData/data.csv' WITH DELIMITER=',' AND HEADER = TRUE;`
+
+## Test database query
+
+* Select the database you want to test and the amount of queries to make to the database [here](generateData/coreDBQueries.js#L8-L9)
+* Run test with `node generateData/coreDBQueries.js`
+* The test will log to the console the last query time, after n amount of queries
+* You can also test the time after handling the data (like console log data) in the on data block for the database you choose
+* To test the time it takes to execute the function run this instead `time node generateData/coreDBQueries.js`
 
 
