@@ -4,7 +4,7 @@ dbConnection.connect();
 
 const getAllExpReviews = (expId, callback) => {
   const experienceId = expId;
-  const query = 'select * from reviews where experience_id=($1);';
+  const query = 'SELECT * FROM reviews WHERE experience_id=($1);';
   dbConnection.query(query, [experienceId], (err, response) => {
     if (err) {
       callback(err);
