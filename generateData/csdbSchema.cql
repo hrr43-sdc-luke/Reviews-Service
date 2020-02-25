@@ -7,10 +7,10 @@ CREATE TABLE IF NOT EXISTS airbnb.reviews (
   id int PRIMARY KEY,
   experience_id INT,
   username VARCHAR,
-  avatar VARCHAR,
+  review VARCHAR,
   date DATE,
   stars INT,
-  review VARCHAR
+  avatar VARCHAR
 );
 
 USE airbnb;

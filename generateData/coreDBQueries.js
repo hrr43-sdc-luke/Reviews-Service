@@ -5,10 +5,10 @@ const pgdb = require('./pgdbConnection.js');
 const csdb = require('./csdbConnection.js');
 
 // pick a database to test (between 'postgres' and 'cassandra')
-const selectedDataBase = 'cassandra';
-const noOfQueries = 1000;
+const selectedDataBase = 'postgres';
+const noOfQueries = 1;
 
-const getReviews = async (db) => {
+const getReviews = (db) => {
   const logTime = (timer) => {
     console.log(`${noOfQueries} ${selectedDataBase} query; about ${hrtime(timer, 's').toFixed(5)}s per query`);
   };
@@ -28,7 +28,7 @@ const getReviews = async (db) => {
           // console.log(data)
           // start timer when data received
           timer = hrtime();
-        })
+        });
     });
   }
 

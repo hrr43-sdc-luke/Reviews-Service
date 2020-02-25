@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReviewListItem from './reviewListItem.jsx';
+import ReviewListItem from './ReviewListItem.jsx';
 
 function ReviewList({ reviews }) {
   return (

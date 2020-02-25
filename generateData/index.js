@@ -5,12 +5,12 @@ const hrtime = require('process.hrtime');
 const timer = hrtime();
 const mockData = require('./MOCK-DATA.json');
 
-const dataFileName = 'med-data';
+const dataFileName = 'data';
 
 const writeUsers = fs.createWriteStream(`generateData/${dataFileName}.csv`);
 writeUsers.write('id,experience_id,username,review,date,stars,avatar\n', 'utf8');
 
-const noPrimaryRecords = 1000000; // goal is to get 10mil experience records
+const noPrimaryRecords = 10000000; // goal is to get 10mil experience records
 const noReviewsPerPrimeRecords = 10;
 const totalRecords = noPrimaryRecords * noReviewsPerPrimeRecords;
 let reviewId = 0;

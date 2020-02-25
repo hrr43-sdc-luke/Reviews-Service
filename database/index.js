@@ -1,38 +1,20 @@
-const mysql = require('mysql');
+const dbConnection = require('../generateData/pgdbConnection.js');
 
-const hostURL = process.env.DB_URL || 'localhost';
-const username = process.env.DB_User || 'root';
-const pw = process.env.DB_PW || '';
-
-const mysqlConfig = {
-  host: hostURL,
-  user: username,
-  password: pw,
-  database: 'airbnb',
-};
-
-const dbConnection = mysql.createConnection(mysqlConfig);
-
-// dbConnection.connect((err) => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log('mySQL connected!');
-//   }
-// });
+dbConnection.connect();
 
 const getAllExpReviews = (expId, callback) => {
-  const query = 'select * from reviews where experience_id = ?';
   const experienceId = expId;
-  dbConnection.query(query, experienceId, (err, response) => {
+  const query = 'SELECT * FROM reviews WHERE experience_id=($1);';
+  dbConnection.query(query, [experienceId], (err, response) => {
     if (err) {
       callback(err);
     } else {
-      callback(null, response);
+      callback(null, response.rows);
     }
   });
 };
 
+// Need to refactor code below for postgres
 const createExpReview = (newReviews, callback) => {
   const query = 'INSERT INTO reviews SET ?';
   dbConnection.query(query, newReviews, (err, response) => {
