@@ -1,3 +1,4 @@
+const nr = require('newrelic');
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
@@ -24,7 +25,7 @@ app.get('/reviews/:id', (req, res) => {
   });
 });
 
-app.post('/review/', (req, res) => {
+app.post('/review', (req, res) => {
   db.createExpReview(req.body, (err, reviewId) => {
     if (err) {
       res.status(400).json(err);

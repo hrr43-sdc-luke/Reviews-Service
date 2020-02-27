@@ -14,7 +14,7 @@ let timer;
 client.connect((err, pgdb) => {
   console.log('Connected to postgres. Please wait a moment while your records are being copied...');
   timer = hrtime();
-  const stream = pgdb.query(copyFrom('COPY reviews(id,experience_id,username,review,date,stars,avatar) FROM STDIN CSV HEADER;'));
+  const stream = pgdb.query(copyFrom('COPY reviews(experience_id,username,review,date,stars,avatar) FROM STDIN CSV HEADER;'));
   const fileStream = fs.createReadStream(filePath);
   fileStream.on('error', (error) => {
     console.log(`Error in reading file: ${error}`);
@@ -24,13 +24,14 @@ client.connect((err, pgdb) => {
   });
   stream.on('end', () => {
     console.log(`Success! ${csvFile} was copied into postgres in ${hrtime(timer, 's')}seconds`);
-    console.log('Please wait a little more while the index for experience_id is being created')
+    console.log('Please wait a little more while the index for experience_id is being created');
+    timer = hrtime();
     pgdb.query('Create index experience_idx on reviews using hash (experience_id);', (indexErr) => {
       if (indexErr) {
         console.error(err);
       } else {
-        console.log('Index created for experience_id! All Done!');
-        client.end();
+        console.log(`Success! Index created for experience_id in ${hrtime(timer, 's')}seconds! All Done!`);
+        pgdb.end();
       }
     });
   });

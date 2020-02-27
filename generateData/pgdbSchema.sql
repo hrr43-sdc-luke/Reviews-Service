@@ -3,7 +3,7 @@ CREATE DATABASE airbnb;
 
 DROP TABLE IF EXISTS reviews;
 CREATE TABLE reviews (
-  id INT PRIMARY KEY NOT NULL,
+  id serial PRIMARY KEY UNIQUE,
   experience_id INT NOT NULL,
   username VARCHAR (20) NOT NULL,
   review VARCHAR (400) NOT NULL,
@@ -11,4 +11,3 @@ CREATE TABLE reviews (
   stars INT NOT NULL,
   avatar VARCHAR (150) NOT NULL
 );
-

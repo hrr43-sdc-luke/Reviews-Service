@@ -14,4 +14,8 @@ const client = new Pool({
   connectionString,
 });
 
+client.on('error', (err) => {
+  console.error(err);
+});
+
 module.exports = client;

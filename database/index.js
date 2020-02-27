@@ -16,9 +16,12 @@ const getAllExpReviews = (expId, callback) => {
 
 // Need to refactor code below for postgres
 const createExpReview = (newReviews, callback) => {
-  const query = 'INSERT INTO reviews SET ?';
-  dbConnection.query(query, newReviews, (err, response) => {
+  const columns = Object.keys(newReviews).join(',');
+  const values = Object.values(newReviews)
+  const query = `INSERT INTO reviews(${columns}) VALUES ($1, $2, $3, $4, $5, $6)`;
+  dbConnection.query(query, values, (err, response) => {
     if (err) {
+      console.log(err)
       callback(err);
     } else {
       callback(null, response.insertId);
